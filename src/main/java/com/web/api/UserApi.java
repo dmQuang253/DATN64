@@ -84,7 +84,24 @@ public class UserApi {
                 .body(result);
     }
 
-    
+    @PostMapping("/active-account")
+    public ResponseEntity<?> activeAccount(@RequestParam String email, @RequestParam String key) throws URISyntaxException {
+        userService.activeAccount(key, email);
+        return new ResponseEntity<>("kích hoạt thành công", HttpStatus.OK);
+    }
+
+    @PostMapping("/user/change-password")
+    public ResponseEntity<?> changePassword(@RequestBody PasswordDto passwordDto){
+        userService.changePass(passwordDto.getOldPass(), passwordDto.getNewPass());
+        return new ResponseEntity<>("Success", HttpStatus.OK);
+    }
+
+    @PostMapping("/forgot-password")
+    public ResponseEntity<?> changePassword(@RequestParam String email){
+        userService.forgotPassword(email);
+        return new ResponseEntity<>("Success", HttpStatus.OK);
+    }
+
     @GetMapping("/admin/get-user-by-role")
     public ResponseEntity<?> getUserByRole(@RequestParam(value = "role", required = false) String role,
                                            @RequestParam(value = "q", required = false) String search,
@@ -98,13 +115,23 @@ public class UserApi {
         System.out.println("admin");
     }
 
-    @DeleteMapping("/admin/delete")
-    public ResponseEntity<?> delete(@RequestParam("id") Long id){
-        if(invoiceDetailRepository.countByProductColor(id) > 0){
-            throw new MessageException("Màu sắc sản phẩm đã có người mua, không thể xóa");
+    @GetMapping("/user/check-role-user")
+    public void checkRoleUser(){
+        System.out.println("user");
+    }
+
+    @PostMapping("/admin/lockOrUnlockUser")
+    public void activeOrUnactiveUser(@RequestParam("id") Long id){
+        User user = userRepository.findById(id).get();
+        if(user.getActived() == true){
+            user.setActived(false);
+            userRepository.save(user);
+            return;
         }
-        productColorRepository.deleteById(id);
-        return new ResponseEntity<>("delete success", HttpStatus.OK);
+        else{
+            user.setActived(true);
+            userRepository.save(user);
+        }
     }
 
     @PostMapping("/admin/addaccount")
@@ -114,23 +141,5 @@ public class UserApi {
         return ResponseEntity
                 .created(new URI("/api/register-user/" + user.getUsername()))
                 .body(result);
-    }
-
-@GetMapping("/public/find-by-page")
-    public ResponseEntity<?> findByType(@RequestParam(value = "page") String page){
-        List<Banner> banners = bannerService.findByPageName(page);
-        return new ResponseEntity<>(banners,HttpStatus.OK);
-    }
-
-    @PostMapping("/admin/create")
-    public ResponseEntity<?> save(@RequestBody Banner banner){
-        Banner result = bannerService.save(banner);
-        return new ResponseEntity<>(result, HttpStatus.CREATED);
-    }
-
-    @PostMapping("/admin/update")
-    public ResponseEntity<?> update(@RequestBody Banner banner){
-        Banner result = bannerService.update(banner);
-        return new ResponseEntity<>(result, HttpStatus.CREATED);
     }
 }
