@@ -17,3 +17,4 @@ public class Authority {
     private String name;
 
 }
+
