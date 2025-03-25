@@ -27,16 +27,11 @@ public class User{
 
     private String email;
 
-    private String password;
-
-    private String fullname;
+   
 
     private String phone;
 
-    private Boolean actived;
-
-    private String activation_key;
-
+    
     private Date createdDate;
 
     private String tokenFcm;

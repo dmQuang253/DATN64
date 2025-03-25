@@ -23,12 +23,7 @@ public class UserAddress {
     @Column(name = "id")
     private Long id;
 
-    private String fullname;
-
-    private String phone;
-
-    private String streetName;
-
+    
     private Boolean primaryAddres;
 
     private Date createdDate;
