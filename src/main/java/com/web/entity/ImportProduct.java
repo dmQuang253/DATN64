@@ -35,6 +35,18 @@ public class ImportProduct {
 
     @Transient
     private String productName;
+private Time importTime;
+
+    @Min(1)
+    private Integer quantity;
+
+    private Double importPrice;
+
+    private String description;
+
+    @Transient
+    private String colorName;
+
 
     @ManyToOne
     @JoinColumn(name = "product_size_id")

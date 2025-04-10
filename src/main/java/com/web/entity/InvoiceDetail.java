@@ -16,13 +16,11 @@ public class InvoiceDetail {
     @Column(name = "id")
     private Long id;
 
-    private Integer quantity;
+    
 
     private Double price;
 
-    @ManyToOne
-    @JoinColumn(name = "product_size_id")
-    private ProductSize productSize;
+    
 
     @ManyToOne
     @JoinColumn(name = "invoice_id")
