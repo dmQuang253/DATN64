@@ -22,18 +22,7 @@ public class Category {
     @Column(name = "id")
     private Long id;
 
-    @NotBlank(message = "Tên danh mục không được để trống")
-    @NotNull(message = "Tên danh mục không được để trống")
-    private String name;
-
-    private Boolean isPrimary;
-
-    private String imageBanner;
-
-    @ManyToOne
-    @JoinColumn(name = "category_parent")
-    @JsonBackReference
-    private Category category;
+    
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.REMOVE)
     @JsonManagedReference

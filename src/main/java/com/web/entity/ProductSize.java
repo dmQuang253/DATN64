@@ -29,6 +29,11 @@ public class ProductSize {
     @JsonBackReference
     private ProductColor productColor;
 
+@ManyToOne
+    @JoinColumn(name = "product_color_id")
+    @JsonBackReference
+    private ProductColor productColor;
+
     @OneToMany(mappedBy = "productSize", cascade = CascadeType.REMOVE, fetch = FetchType.LAZY)
     @JsonIgnore
     private List<ImportProduct> importProducts;
