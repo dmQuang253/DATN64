@@ -24,7 +24,18 @@ public class ProductRequest {
 
     private String alias;
 
-    
+    @NotBlank(message = "Tên sản phẩm không được bỏ trống")
+    private String name;
+
+    private String imageBanner;
+
+    @NotNull(message = "Giá tiền không được bỏ trống")
+    private Double price;
+
+    private String description;
+
+    private Trademark trademark;
+
     private Material material;
 
     private Sole sole;
