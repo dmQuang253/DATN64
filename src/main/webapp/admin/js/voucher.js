@@ -157,5 +157,57 @@ async function loadVoucherDonHang() {
     for (i = 0; i < list.length; i++) {
         main += `<option value="${list[i].id}">${list[i].name} - tối thiểu: ${formatmoney(list[i].minAmount)} - giảm giá: ${formatmoney(list[i].discount)}</option>`
     }
+	if (response.status < 300) {
+        swal({
+                title: "Thông báo",
+                text: "thêm/sửa voucher thành công!",
+                type: "success"
+            },
+            function() {
+                window.location.href = 'voucher'
+            });
+    }
+    if (response.status == exceptionCode) {
+        var result = await response.json()
+        toastr.warning(result.defaultMessage);
+    }
+}
+
+async function deleteVoucher(id) {
+    var con = confirm("Bạn chắc chắn muốn xóa voucher này?");
+    if (con == false) {
+        return;
+    }
+    var url = 'http://localhost:8080/api/voucher/admin/delete?id=' + id;
+    const response = await fetch(url, {
+        method: 'DELETE',
+        headers: new Headers({
+            'Authorization': 'Bearer ' + token
+        })
+    });
+    if (response.status < 300) {
+        toastr.success("xóa voucher thành công!");
+        await new Promise(r => setTimeout(r, 1000));
+        window.location.reload();
+    }
+    if (response.status == exceptionCode) {
+        var result = await response.json()
+        toastr.warning(result.defaultMessage);
+    }
+}
+
+
+async function loadVoucherDonHang() {
+    const response = await fetch('http://localhost:8080/api/voucher/admin/voucher-kha-dung', {
+        method: 'GET',
+        headers: new Headers({
+            'Authorization': 'Bearer ' + token,
+        }),
+    });
+    var list = await response.json();
+    var main = '<option value="-1">--- Chọn khuyến mại ---</option>';
+    for (i = 0; i < list.length; i++) {
+        main += `<option value="${list[i].id}">${list[i].name} - tối thiểu: ${formatmoney(list[i].minAmount)} - giảm giá: ${formatmoney(list[i].discount)}</option>`
+    }
     document.getElementById("khuyenmai").innerHTML = main
 }
