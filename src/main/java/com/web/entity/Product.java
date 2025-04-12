@@ -50,7 +50,17 @@ public class Product {
     @ManyToOne
     private Sole sole;
 
-    
+    @OneToMany(mappedBy = "product", cascade = {CascadeType.REMOVE, CascadeType.REFRESH})
+    @JsonManagedReference
+    private List<ProductColor> productColors = new ArrayList<>();
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.REMOVE)
+    @JsonManagedReference
+    private List<ProductCategory> productCategories = new ArrayList<>();
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.REMOVE)
+    @JsonManagedReference
+    private List<ProductImage> productImages = new ArrayList<>();
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.REMOVE, fetch = FetchType.LAZY)
     @JsonIgnore

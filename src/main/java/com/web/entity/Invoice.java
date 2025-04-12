@@ -38,14 +38,6 @@ public class Invoice {
 
     private PayType payType;
 
-private Double totalAmount;
-
-    private String receiverName;
-
-    private String phone;
-
-    private String address;
-
     @ManyToOne
     @JoinColumn(name = "user_address_id")
     private UserAddress userAddress;

@@ -37,20 +37,4 @@ public class Districts {
             "districts"
     })
     private List<Wards> wards = new ArrayList<>();
-@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
-
-    private String name;
-
-    @ManyToOne
-    @JoinColumn(name = "province_id")
-    private Province province;
-
-    @OneToMany(mappedBy = "districts")
-    @JsonIgnoreProperties(value = {
-            "districts"
-    })
-    private List<Wards> wards = new ArrayList<>();
 }
