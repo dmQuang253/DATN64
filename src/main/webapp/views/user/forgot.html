@@ -37,15 +37,95 @@
     </div>
 
     <div class="content contentlogin" style="background-image: url(image/bg_login.webp);">
-        <div class="loginform col-lg-7 col-md-7 col-sm-12 col-12">
+        <div >
             <br><br>
             <p class="plogintl"><span class="dangtl">QUÊN </span><span class="kytl">MẬT KHẨU</span></p>
             <p class="noteregis">Nếu bạn quên mật khẩu, vui lòng nhập địa chỉ email đã đăng ký của bạn. Chúng tôi sẽ gửi cho bạn một liên kết để đặt lại mật khẩu.</p>
             <form class="inputloginform" action="javascript:forgorPassword()">
                 <input id="email" placeholder="Nhập email" class="inputform">
-                <button type="button" class="btnhuylogin" onclick="window.location.href='login'">HỦY</button>
-                <button type="submit" class="btntt">TIẾP TỤC</button>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12 singleblog">
+                <div class="row">
+                    <div class="col-5">
+                        <a href="blogdetail"><img src="image/blog.webp" class="imgblog"></a>
+                    </div>
+                    <div class="col-7 cntblog">
+                        <a href="blogdetail" class="titleblog">15 Cách phối đồ với Jordan 1 cổ thấp CỰC CHẤT chuẩn Style</a>
+                        <a href="blogdetail"><span class="desblog">Sneaker phối với quần áo thường ngày đã trở thành một trong những outffit được rất nhiều bạn trẻ sử dụng. Nhưng liệu bạn đã biết cách phối đồ với Jordan 1 cổ thấp sao cho hợp thời trang hay chưa? Cùng YODy khám phá ngay sau đây nhé. </span></a>
+                        <div class="userblog">
+                            <img src="image/logo.png" class="avtyo">
+                            <span class="userdbg">Yody</span>
+                            <span class="timeblog"><i class="fa fa-clock"></i> 15/08/2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </form><br><br>
+			
+			<div class="col-lg-3 col-md-3 col-filter">
+                <div class="filter">
+                    <label class="lb-chon-danhmuc">Chọn khoảng giá</label>
+                    <button onclick="searchFull(0,null)" class="btn-apdung">Áp dụng</button>
+                    <div id="slider-range" class="price-filter-range" name="rangeInput"></div>
+                    <div style="margin:10px auto">
+                        Từ: <input type="number" id="min_price" class="price-range-field" /> -
+                        <input type="number" id="max_price" class="price-range-field" />
+                    </div>
+                    <label class="lb-chon-danhmuc">Chọn danh mục</label>
+                    <div id="listsearchCategory">
+                        <div class="singlelistmenu">
+                            <label class="checkbox-custom cateparent">áo khoác</i>
+                                <input onchange="clickOpenSubMenu(this)" type="checkbox">
+                                <span class="checkmark-checkbox"></span>
+                            </label>
+                            <div class="listsubcate">
+                                <label class="checkbox-custom">áo khoác
+                                    <input type="checkbox">
+                                    <span class="checkmark-checkbox"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label class="lb-chon-danhmuc">Chọn thương hiệu</label>
+                    <div id="listthuonghieu">
+                        <div class="singlelistmenu">
+                            <label class="checkbox-custom cateparent">áo khoác</i>
+                                <input onchange="clickOpenSubMenu(this)" type="checkbox">
+                                <span class="checkmark-checkbox"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9">
+                <div class="row" id="listproductpro">
+                    <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                        <a href="" class="linkpro">
+                            <div class="singlepro">
+                                <div class="productsold"><span class="reviewsp">Đã bán: 250</span></div>
+                                <img src="image/sp1.webp" class="imgpro">
+                                <span class="proname">Women's Casual Pants With Waist Belt</span>
+                                <span class="proprice">499.000đ</span>
+                                <div class="listimgpro">
+                                    <div class="divimgsmpro"><img class="imgsmpro" src="image/sp2.webp"></div>
+                                    <div class="divimgsmpro"><img class="imgsmpro" src="image/sp3.webp"></div>
+                                    <div class="divimgsmpro"><img class="imgsmpro" src="image/sp4.webp"></div>
+                                    <div class="divimgsmpro"><img class="imgsmpro" src="image/sp5.webp"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+                <nav aria-label="Page navigation example" style="margin-top: 30px;">
+                    <ul class="pagination" id="pageable">
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    </ul>
+                </nav>
+            </div>
+			
+			
         </div>
     </div>
 
