@@ -25,10 +25,6 @@ public class ProductColor {
 
     private String linkImage;
 
-private String colorName;
-
-    private String linkImage;
-
     @ManyToOne
     @JoinColumn(name = "product_id")
     @JsonBackReference

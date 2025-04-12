@@ -40,8 +40,382 @@
             <p class="titledtblog" id="title">TOP 10 shop giày da nam Hà Nội uy tín, chất lượng nhất</p>
             <div class="userblog">
                 <img src="image/logo.png" class="">
-                <span class="">Biên tập bởi : <span id="userbldt">Bùi Văn Tuyên</span></span>
-                <span class="timedtblog"><i class="fa fa-clock"></i> <span id="ngaydang">15/08/2023</span></span>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12 singleblog">
+                <div class="row">
+                    <div class="col-5">
+                        <a href="blogdetail"><img src="image/blog.webp" class="imgblog"></a>
+                    </div>
+                    <div class="col-7 cntblog">
+                        <a href="blogdetail" class="titleblog">15 Cách phối đồ với Jordan 1 cổ thấp CỰC CHẤT chuẩn Style</a>
+                        <a href="blogdetail"><span class="desblog">Sneaker phối với quần áo thường ngày đã trở thành một trong những outffit được rất nhiều bạn trẻ sử dụng. Nhưng liệu bạn đã biết cách phối đồ với Jordan 1 cổ thấp sao cho hợp thời trang hay chưa? Cùng YODy khám phá ngay sau đây nhé. </span></a>
+                        <div class="userblog">
+                            <img src="image/logo.png" class="avtyo">
+                            <span class="userdbg">Yody</span>
+                            <span class="timeblog"><i class="fa fa-clock"></i> 15/08/2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div><div class="col-lg-12 col-md-12 col-sm-6 col-6">
+                            <div class="avaaccount">
+                                <img src="image/avatar.webp" class="avataracc">
+                                <button onclick="logout()" class="btnlogoutacc">Đăng xuất</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-6 col-6 sinv">
+                            <!-- <div nofi="infor" onclick="changeLink(this,'infor')" class="tabdv activetabdv">
+                                <a data-toggle="tab" href="#infor"><img class="imgau" src="image/user.svg"> Tài khoản của tôi</a>
+                            </div> -->
+                            <div onclick="changeLink(this,'address')" class="tabdv activetabdv">
+                                <a data-toggle="tab" href="#address"><img class="imgau" src="image/add.svg"> Sổ địa chỉ</a>
+                            </div>
+                            <div onclick="changeLink(this,'invoice')" class="tabdv">
+                                <a data-toggle="tab" href="#invoice"><img class="imgau" src="image/invoice.svg"> Đơn hàng của tôi</a>
+                            </div>
+                            <div onclick="changeLink(this,'changepass')" class="tabdv">
+                                <a data-toggle="tab" href="#changepass"><img class="imgau" src="image/pass.svg"> Đổi mật khẩu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-12 collistcart">
+                <div class="navright">
+                    <div class="tab-content contentab">
+                        
+                        <div role="tabpanel" class="tab-pane" id="invoice">
+                            <div class="headeraccount">
+                                <p class="fontyel">Đơn hàng của tôi</p>
+                                <span>(Nhấp vào mã đơn hàng để xem chi tiêt)</span>
+                                <div class="right_flex">
+                                    <span class="textrf" id="sldonhang">0 đơn hàng</span>
+                                </div>
+                            </div>
+                            <table class="table table-cart table-order" id="my-orders-table">
+                                <thead class="thead-default">
+                                    <tr>
+                                        <th>Mã đơn hàng</th>
+                                        <th class="floatr">Ngày mua</th>
+                                        <th>Địa chỉ</th>
+                                        <th class="floatr">Giá trị<br>đơn hàng</th>
+                                        <th>Trạng thái thanh toán</th>
+                                        <th class="floatr">Trạng thái vận chuyển</th>
+                                        <th>Hủy</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listinvoice">
+                                    <tr>
+                                        <td><a data-bs-toggle="modal" data-bs-target="#modaldeail" class="yls pointer-event">#115871</a></td>
+                                        <td class="floatr">11:37 21/09/2023</td>
+                                        <td>gia lam, ha noi, viet nam, vietnam,Quận Đống Đa, Hà Nội, Vietnam</td>
+                                        <td class="floatr"><span class="yls">289.000đ</span></td>
+                                        <td><span class="span_pending">Chưa thu tiền</span></td>
+                                        <td class="floatr"><span class="span_">Chưa chuyển</span></td>
+                                        <td><i class="fa fa-trash-o huydon"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-cart table-order" id="ordermobile">
+                                <tbody id="listinvoicemb">
+                                    <tr class="trmobile">
+                                        <td style="width: 40%;">Đơn hàng</td>
+                                        <td class="position-relative">
+                                            <a data-bs-toggle="modal" data-bs-target="#modaldeail" class="yls iddhmb pointer-event">#115871</a>
+                                            <span class="huymobile">Hủy đơn</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ngày: </td>
+                                        <td>11:37 21/09/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Địa chỉ: </td>
+                                        <td>gia lam, ha noi, viet nam, vietnam, Quận Đống Đa, Hà Nội, Vietnam</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Giá trị đơn hàng:</td>
+                                        <td class="yls">289.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TT Thanh toán:</td>
+                                        <td>Chưa thanh toán</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TT Vận chuyển:<br><br></td>
+                                        <td>Chưa chuyển</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><div class="col-lg-12 col-md-12 col-sm-6 col-6">
+                            <div class="avaaccount">
+                                <img src="image/avatar.webp" class="avataracc">
+                                <button onclick="logout()" class="btnlogoutacc">Đăng xuất</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-6 col-6 sinv">
+                            <!-- <div nofi="infor" onclick="changeLink(this,'infor')" class="tabdv activetabdv">
+                                <a data-toggle="tab" href="#infor"><img class="imgau" src="image/user.svg"> Tài khoản của tôi</a>
+                            </div> -->
+                            <div onclick="changeLink(this,'address')" class="tabdv activetabdv">
+                                <a data-toggle="tab" href="#address"><img class="imgau" src="image/add.svg"> Sổ địa chỉ</a>
+                            </div>
+                            <div onclick="changeLink(this,'invoice')" class="tabdv">
+                                <a data-toggle="tab" href="#invoice"><img class="imgau" src="image/invoice.svg"> Đơn hàng của tôi</a>
+                            </div>
+                            <div onclick="changeLink(this,'changepass')" class="tabdv">
+                                <a data-toggle="tab" href="#changepass"><img class="imgau" src="image/pass.svg"> Đổi mật khẩu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-12 collistcart">
+                <div class="navright">
+                    <div class="tab-content contentab">
+                        
+                        <div role="tabpanel" class="tab-pane" id="invoice">
+                            <div class="headeraccount">
+                                <p class="fontyel">Đơn hàng của tôi</p>
+                                <span>(Nhấp vào mã đơn hàng để xem chi tiêt)</span>
+                                <div class="right_flex">
+                                    <span class="textrf" id="sldonhang">0 đơn hàng</span>
+                                </div>
+                            </div>
+                            <table class="table table-cart table-order" id="my-orders-table">
+                                <thead class="thead-default">
+                                    <tr>
+                                        <th>Mã đơn hàng</th>
+                                        <th class="floatr">Ngày mua</th>
+                                        <th>Địa chỉ</th>
+                                        <th class="floatr">Giá trị<br>đơn hàng</th>
+                                        <th>Trạng thái thanh toán</th>
+                                        <th class="floatr">Trạng thái vận chuyển</th>
+                                        <th>Hủy</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listinvoice">
+                                    <tr>
+                                        <td><a data-bs-toggle="modal" data-bs-target="#modaldeail" class="yls pointer-event">#115871</a></td>
+                                        <td class="floatr">11:37 21/09/2023</td>
+                                        <td>gia lam, ha noi, viet nam, vietnam,Quận Đống Đa, Hà Nội, Vietnam</td>
+                                        <td class="floatr"><span class="yls">289.000đ</span></td>
+                                        <td><span class="span_pending">Chưa thu tiền</span></td>
+                                        <td class="floatr"><span class="span_">Chưa chuyển</span></td>
+                                        <td><i class="fa fa-trash-o huydon"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-cart table-order" id="ordermobile">
+                                <tbody id="listinvoicemb">
+                                    <tr class="trmobile">
+                                        <td style="width: 40%;">Đơn hàng</td>
+                                        <td class="position-relative">
+                                            <a data-bs-toggle="modal" data-bs-target="#modaldeail" class="yls iddhmb pointer-event">#115871</a>
+                                            <span class="huymobile">Hủy đơn</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ngày: </td>
+                                        <td>11:37 21/09/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Địa chỉ: </td>
+                                        <td>gia lam, ha noi, viet nam, vietnam, Quận Đống Đa, Hà Nội, Vietnam</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Giá trị đơn hàng:</td>
+                                        <td class="yls">289.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TT Thanh toán:</td>
+                                        <td>Chưa thanh toán</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TT Vận chuyển:<br><br></td>
+                                        <td>Chưa chuyển</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><div class="col-lg-12 col-md-12 col-sm-6 col-6">
+                            <div class="avaaccount">
+                                <img src="image/avatar.webp" class="avataracc">
+                                <button onclick="logout()" class="btnlogoutacc">Đăng xuất</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-6 col-6 sinv">
+                            <!-- <div nofi="infor" onclick="changeLink(this,'infor')" class="tabdv activetabdv">
+                                <a data-toggle="tab" href="#infor"><img class="imgau" src="image/user.svg"> Tài khoản của tôi</a>
+                            </div> -->
+                            <div onclick="changeLink(this,'address')" class="tabdv activetabdv">
+                                <a data-toggle="tab" href="#address"><img class="imgau" src="image/add.svg"> Sổ địa chỉ</a>
+                            </div>
+                            <div onclick="changeLink(this,'invoice')" class="tabdv">
+                                <a data-toggle="tab" href="#invoice"><img class="imgau" src="image/invoice.svg"> Đơn hàng của tôi</a>
+                            </div>
+                            <div onclick="changeLink(this,'changepass')" class="tabdv">
+                                <a data-toggle="tab" href="#changepass"><img class="imgau" src="image/pass.svg"> Đổi mật khẩu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-12 collistcart">
+                <div class="navright">
+                    <div class="tab-content contentab">
+                        
+                        <div role="tabpanel" class="tab-pane" id="invoice">
+                            <div class="headeraccount">
+                                <p class="fontyel">Đơn hàng của tôi</p>
+                                <span>(Nhấp vào mã đơn hàng để xem chi tiêt)</span>
+                                <div class="right_flex">
+                                    <span class="textrf" id="sldonhang">0 đơn hàng</span>
+                                </div>
+                            </div>
+                            <table class="table table-cart table-order" id="my-orders-table">
+                                <thead class="thead-default">
+                                    <tr>
+                                        <th>Mã đơn hàng</th>
+                                        <th class="floatr">Ngày mua</th>
+                                        <th>Địa chỉ</th>
+                                        <th class="floatr">Giá trị<br>đơn hàng</th>
+                                        <th>Trạng thái thanh toán</th>
+                                        <th class="floatr">Trạng thái vận chuyển</th>
+                                        <th>Hủy</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listinvoice">
+                                    <tr>
+                                        <td><a data-bs-toggle="modal" data-bs-target="#modaldeail" class="yls pointer-event">#115871</a></td>
+                                        <td class="floatr">11:37 21/09/2023</td>
+                                        <td>gia lam, ha noi, viet nam, vietnam,Quận Đống Đa, Hà Nội, Vietnam</td>
+                                        <td class="floatr"><span class="yls">289.000đ</span></td>
+                                        <td><span class="span_pending">Chưa thu tiền</span></td>
+                                        <td class="floatr"><span class="span_">Chưa chuyển</span></td>
+                                        <td><i class="fa fa-trash-o huydon"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-cart table-order" id="ordermobile">
+                                <tbody id="listinvoicemb">
+                                    <tr class="trmobile">
+                                        <td style="width: 40%;">Đơn hàng</td>
+                                        <td class="position-relative">
+                                            <a data-bs-toggle="modal" data-bs-target="#modaldeail" class="yls iddhmb pointer-event">#115871</a>
+                                            <span class="huymobile">Hủy đơn</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ngày: </td>
+                                        <td>11:37 21/09/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Địa chỉ: </td>
+                                        <td>gia lam, ha noi, viet nam, vietnam, Quận Đống Đa, Hà Nội, Vietnam</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Giá trị đơn hàng:</td>
+                                        <td class="yls">289.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TT Thanh toán:</td>
+                                        <td>Chưa thanh toán</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TT Vận chuyển:<br><br></td>
+                                        <td>Chưa chuyển</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><div class="col-lg-12 col-md-12 col-sm-6 col-6">
+                            <div class="avaaccount">
+                                <img src="image/avatar.webp" class="avataracc">
+                                <button onclick="logout()" class="btnlogoutacc">Đăng xuất</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-6 col-6 sinv">
+                            <!-- <div nofi="infor" onclick="changeLink(this,'infor')" class="tabdv activetabdv">
+                                <a data-toggle="tab" href="#infor"><img class="imgau" src="image/user.svg"> Tài khoản của tôi</a>
+                            </div> -->
+                            <div onclick="changeLink(this,'address')" class="tabdv activetabdv">
+                                <a data-toggle="tab" href="#address"><img class="imgau" src="image/add.svg"> Sổ địa chỉ</a>
+                            </div>
+                            <div onclick="changeLink(this,'invoice')" class="tabdv">
+                                <a data-toggle="tab" href="#invoice"><img class="imgau" src="image/invoice.svg"> Đơn hàng của tôi</a>
+                            </div>
+                            <div onclick="changeLink(this,'changepass')" class="tabdv">
+                                <a data-toggle="tab" href="#changepass"><img class="imgau" src="image/pass.svg"> Đổi mật khẩu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-12 collistcart">
+                <div class="navright">
+                    <div class="tab-content contentab">
+                        
+                        <div role="tabpanel" class="tab-pane" id="invoice">
+                            <div class="headeraccount">
+                                <p class="fontyel">Đơn hàng của tôi</p>
+                                <span>(Nhấp vào mã đơn hàng để xem chi tiêt)</span>
+                                <div class="right_flex">
+                                    <span class="textrf" id="sldonhang">0 đơn hàng</span>
+                                </div>
+                            </div>
+                            <table class="table table-cart table-order" id="my-orders-table">
+                                <thead class="thead-default">
+                                    <tr>
+                                        <th>Mã đơn hàng</th>
+                                        <th class="floatr">Ngày mua</th>
+                                        <th>Địa chỉ</th>
+                                        <th class="floatr">Giá trị<br>đơn hàng</th>
+                                        <th>Trạng thái thanh toán</th>
+                                        <th class="floatr">Trạng thái vận chuyển</th>
+                                        <th>Hủy</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listinvoice">
+                                    <tr>
+                                        <td><a data-bs-toggle="modal" data-bs-target="#modaldeail" class="yls pointer-event">#115871</a></td>
+                                        <td class="floatr">11:37 21/09/2023</td>
+                                        <td>gia lam, ha noi, viet nam, vietnam,Quận Đống Đa, Hà Nội, Vietnam</td>
+                                        <td class="floatr"><span class="yls">289.000đ</span></td>
+                                        <td><span class="span_pending">Chưa thu tiền</span></td>
+                                        <td class="floatr"><span class="span_">Chưa chuyển</span></td>
+                                        <td><i class="fa fa-trash-o huydon"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-cart table-order" id="ordermobile">
+                                <tbody id="listinvoicemb">
+                                    <tr class="trmobile">
+                                        <td style="width: 40%;">Đơn hàng</td>
+                                        <td class="position-relative">
+                                            <a data-bs-toggle="modal" data-bs-target="#modaldeail" class="yls iddhmb pointer-event">#115871</a>
+                                            <span class="huymobile">Hủy đơn</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ngày: </td>
+                                        <td>11:37 21/09/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Địa chỉ: </td>
+                                        <td>gia lam, ha noi, viet nam, vietnam, Quận Đống Đa, Hà Nội, Vietnam</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Giá trị đơn hàng:</td>
+                                        <td class="yls">289.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TT Thanh toán:</td>
+                                        <td>Chưa thanh toán</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TT Vận chuyển:<br><br></td>
+                                        <td>Chưa chuyển</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
             </div>
             <img id="imgbanner" src="image/blog.webp" alt="" class="imgbldt"><br> <br>
             <span class="desdetailblog">Có thể nói, giày da là một trong những must-have-item của những anh chàng đam mê phong cách lịch lãm, thanh lịch. Dưới đây, YODY sẽ chia sẻ các shop giày da nam Hà Nội đẹp, chất lượng nhất.</span>

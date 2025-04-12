@@ -19,7 +19,13 @@ public class Chatting {
     @Column(name = "id")
     private Long id;
 
-    
+    private String content;
+
+    private Timestamp createdDate;
+
+    @ManyToOne
+    @JoinColumn(name = "sender")
+    private User sender;
 
     @ManyToOne
     @JoinColumn(name = "receiver")
