@@ -52,14 +52,97 @@
         </div>
         <h2 class="title-block">DANH MỤC NỔI BẬT</h2>
         <div id="listdmproduct" class="row listdmproduct">
-            <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-                <a href="">
-                    <div class="singledmpro">
-                        <img src="image/cate1.svg" class="imgcatepro">
-                        <span class="namedmpro">Áo polo</span>
+            <div class="col-lg-12 col-md-12 col-sm-6 col-6">
+                            <div class="avaaccount">
+                                <img src="image/avatar.webp" class="avataracc">
+                                <button onclick="logout()" class="btnlogoutacc">Đăng xuất</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-6 col-6 sinv">
+                            <!-- <div nofi="infor" onclick="changeLink(this,'infor')" class="tabdv activetabdv">
+                                <a data-toggle="tab" href="#infor"><img class="imgau" src="image/user.svg"> Tài khoản của tôi</a>
+                            </div> -->
+                            <div onclick="changeLink(this,'address')" class="tabdv activetabdv">
+                                <a data-toggle="tab" href="#address"><img class="imgau" src="image/add.svg"> Sổ địa chỉ</a>
+                            </div>
+                            <div onclick="changeLink(this,'invoice')" class="tabdv">
+                                <a data-toggle="tab" href="#invoice"><img class="imgau" src="image/invoice.svg"> Đơn hàng của tôi</a>
+                            </div>
+                            <div onclick="changeLink(this,'changepass')" class="tabdv">
+                                <a data-toggle="tab" href="#changepass"><img class="imgau" src="image/pass.svg"> Đổi mật khẩu</a>
+                            </div>
+                        </div>
                     </div>
-                </a>
-            </div> -->
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-12 collistcart">
+                <div class="navright">
+                    <div class="tab-content contentab">
+                        
+                        <div role="tabpanel" class="tab-pane" id="invoice">
+                            <div class="headeraccount">
+                                <p class="fontyel">Đơn hàng của tôi</p>
+                                <span>(Nhấp vào mã đơn hàng để xem chi tiêt)</span>
+                                <div class="right_flex">
+                                    <span class="textrf" id="sldonhang">0 đơn hàng</span>
+                                </div>
+                            </div>
+                            <table class="table table-cart table-order" id="my-orders-table">
+                                <thead class="thead-default">
+                                    <tr>
+                                        <th>Mã đơn hàng</th>
+                                        <th class="floatr">Ngày mua</th>
+                                        <th>Địa chỉ</th>
+                                        <th class="floatr">Giá trị<br>đơn hàng</th>
+                                        <th>Trạng thái thanh toán</th>
+                                        <th class="floatr">Trạng thái vận chuyển</th>
+                                        <th>Hủy</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listinvoice">
+                                    <tr>
+                                        <td><a data-bs-toggle="modal" data-bs-target="#modaldeail" class="yls pointer-event">#115871</a></td>
+                                        <td class="floatr">11:37 21/09/2023</td>
+                                        <td>gia lam, ha noi, viet nam, vietnam,Quận Đống Đa, Hà Nội, Vietnam</td>
+                                        <td class="floatr"><span class="yls">289.000đ</span></td>
+                                        <td><span class="span_pending">Chưa thu tiền</span></td>
+                                        <td class="floatr"><span class="span_">Chưa chuyển</span></td>
+                                        <td><i class="fa fa-trash-o huydon"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-cart table-order" id="ordermobile">
+                                <tbody id="listinvoicemb">
+                                    <tr class="trmobile">
+                                        <td style="width: 40%;">Đơn hàng</td>
+                                        <td class="position-relative">
+                                            <a data-bs-toggle="modal" data-bs-target="#modaldeail" class="yls iddhmb pointer-event">#115871</a>
+                                            <span class="huymobile">Hủy đơn</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ngày: </td>
+                                        <td>11:37 21/09/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Địa chỉ: </td>
+                                        <td>gia lam, ha noi, viet nam, vietnam, Quận Đống Đa, Hà Nội, Vietnam</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Giá trị đơn hàng:</td>
+                                        <td class="yls">289.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TT Thanh toán:</td>
+                                        <td>Chưa thanh toán</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TT Vận chuyển:<br><br></td>
+                                        <td>Chưa chuyển</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-3"></div>
@@ -73,6 +156,70 @@
                 </select>
             </div>
             <div class="col-lg-3 col-md-3 col-filter">
+                <div class="filter">
+                    <label class="lb-chon-danhmuc">Chọn khoảng giá</label>
+                    <button onclick="searchFull(0,null)" class="btn-apdung">Áp dụng</button>
+                    <div id="slider-range" class="price-filter-range" name="rangeInput"></div>
+                    <div style="margin:10px auto">
+                        Từ: <input type="number" id="min_price" class="price-range-field" /> -
+                        <input type="number" id="max_price" class="price-range-field" />
+                    </div>
+                    <label class="lb-chon-danhmuc">Chọn danh mục</label>
+                    <div id="listsearchCategory">
+                        <div class="singlelistmenu">
+                            <label class="checkbox-custom cateparent">áo khoác</i>
+                                <input onchange="clickOpenSubMenu(this)" type="checkbox">
+                                <span class="checkmark-checkbox"></span>
+                            </label>
+                            <div class="listsubcate">
+                                <label class="checkbox-custom">áo khoác
+                                    <input type="checkbox">
+                                    <span class="checkmark-checkbox"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label class="lb-chon-danhmuc">Chọn thương hiệu</label>
+                    <div id="listthuonghieu">
+                        <div class="singlelistmenu">
+                            <label class="checkbox-custom cateparent">áo khoác</i>
+                                <input onchange="clickOpenSubMenu(this)" type="checkbox">
+                                <span class="checkmark-checkbox"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9">
+                <div class="row" id="listproductpro">
+                    <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                        <a href="" class="linkpro">
+                            <div class="singlepro">
+                                <div class="productsold"><span class="reviewsp">Đã bán: 250</span></div>
+                                <img src="image/sp1.webp" class="imgpro">
+                                <span class="proname">Women's Casual Pants With Waist Belt</span>
+                                <span class="proprice">499.000đ</span>
+                                <div class="listimgpro">
+                                    <div class="divimgsmpro"><img class="imgsmpro" src="image/sp2.webp"></div>
+                                    <div class="divimgsmpro"><img class="imgsmpro" src="image/sp3.webp"></div>
+                                    <div class="divimgsmpro"><img class="imgsmpro" src="image/sp4.webp"></div>
+                                    <div class="divimgsmpro"><img class="imgsmpro" src="image/sp5.webp"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+                <nav aria-label="Page navigation example" style="margin-top: 30px;">
+                    <ul class="pagination" id="pageable">
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    </ul>
+                </nav>
+            </div>
+			
+			<div class="col-lg-3 col-md-3 col-filter">
                 <div class="filter">
                     <label class="lb-chon-danhmuc">Chọn khoảng giá</label>
                     <button onclick="searchFull(0,null)" class="btn-apdung">Áp dụng</button>
