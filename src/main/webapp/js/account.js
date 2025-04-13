@@ -101,20 +101,106 @@ async function regis() {
         }),
         body: JSON.stringify(user)
     });
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: new Headers({
+            'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify(user)
+    });
     var result = await response.json();
-    if (response.status < 300) {
+	async function confirmAccount() {
+    var uls = new URL(document.URL)
+    var email = uls.searchParams.get("email");
+    var key = document.getElementById("maxacthuc").value;
+    var url = 'http://localhost:8080/api/active-account?email=' + email + '&key=' + key
+    const res = await fetch(url, {
+        method: 'POST'
+    });
+    if (res.status < 300) {
         swal({
                 title: "Thông báo",
-                text: "đăng ký thành công! hãy check email của bạn!",
+                text: "Xác nhận tài khoản thành công!",
                 type: "success"
             },
             function() {
-                window.location.href = 'confirm?email=' + result.email
+                window.location.href = 'login'
             });
     }
-    if (response.status == exceptionCode) {
+    if (res.status == exceptionCode) {
+        var result = await res.json()
         toastr.warning(result.defaultMessage);
     }
+}
+
+async function forgorPassword() {
+    var email = document.getElementById("email").value
+    var url = 'http://localhost:8080/api/forgot-password?email=' + email
+    const res = await fetch(url, {
+        method: 'POST'
+    });
+    if (res.status < 300) {
+        swal({
+                title: "",
+                text: "mật khẩu mới đã được gửi về email của bạn",
+                type: "success"
+            },
+            function() {
+                window.location.replace("login")
+            });
+    }
+    if (res.status == exceptionCode) {
+        var result = await res.json()
+        toastr.warning(result.defaultMessage);
+    }
+}
+
+async function changePassword() {
+    var token = localStorage.getItem("token");
+    var oldpass = document.getElementById("oldpass").value
+    var newpass = document.getElementById("newpass").value
+    var renewpass = document.getElementById("renewpass").value
+    var url = 'http://localhost:8080/api/user/change-password';
+    if (newpass != renewpass) {
+        alert("mật khẩu mới không trùng khớp");
+        return;
+    }
+    var passw = {
+        "oldPass": oldpass,
+        "newPass": newpass
+    }
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: new Headers({
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify(passw)
+    });
+    async function loadXa(idHuyen, idtinh) {
+    for (n = 0; n < list.length; n++) {
+        if (list[n].id == idtinh) {
+            var huyen = list[n].districts;
+            for (x = 0; x < huyen.length; x++) {
+                if (huyen[x].id == idHuyen) {
+                    var xa = huyen[x].wards;
+                    var main = ''
+                    for (k = 0; k < xa.length; k++) {
+                        main += `<option value="${xa[k].id}">${xa[k].name}</option>`
+                    }
+                    document.getElementById("xa").innerHTML = main
+                    break;
+                }
+            }
+            break;
+        }
+    }
+}
+
+async function loadHuyenOnchange() {
+    var idtinh = document.getElementById("tinh").value;
+    loadHuyen(idtinh)
+}
 }
 
 
@@ -186,15 +272,30 @@ async function changePassword() {
         }),
         body: JSON.stringify(passw)
     });
-    if (response.status < 300) {
-        swal({
-                title: "Thông báo",
-                text: "cập nhật mật khẩu thành công, hãy đăng nhập lại",
-                type: "success"
-            },
-            function() {
-                window.location.reload();
-            });
+    async function loadXa(idHuyen, idtinh) {
+    for (n = 0; n < list.length; n++) {
+        if (list[n].id == idtinh) {
+            var huyen = list[n].districts;
+            for (x = 0; x < huyen.length; x++) {
+                if (huyen[x].id == idHuyen) {
+                    var xa = huyen[x].wards;
+                    var main = ''
+                    for (k = 0; k < xa.length; k++) {
+                        main += `<option value="${xa[k].id}">${xa[k].name}</option>`
+                    }
+                    document.getElementById("xa").innerHTML = main
+                    break;
+                }
+            }
+            break;
+        }
+    }
+}
+
+async function loadHuyenOnchange() {
+    var idtinh = document.getElementById("tinh").value;
+    loadHuyen(idtinh)
+}
     }
     if (response.status == exceptionCode) {
         var result = await response.json()
