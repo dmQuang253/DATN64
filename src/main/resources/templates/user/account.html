@@ -54,7 +54,101 @@
                                 <button onclick="logout()" class="btnlogoutacc">Đăng xuất</button>
                             </div>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-6 col-6 sinv">
+                        <p style="text-indent: 30px;">Tất cả các sản phẩm đều được bảo hành lỗi 1 đổi 1 trong vòng 7 ngày kể từ khi khách hàng nhận sản phẩm.</p>
+                <p>Một số điều kiện có thể đi kèm, quý khách vui lòng tham khảo thông tin chi tiết bên dưới:</p><br>
+                <h3 dir="ltr"><b>I. Trường hợp được đổi / trả hàng</b></h3>
+                <div style="margin-left: 20px;">
+                    <p dir="ltr"><b>a. Sản phẩm mua bị lỗi sản xuất</b></p>
+                    <p style="text-indent: 30px;" dir="ltr">Quý khách vui lòng kiểm tra sản phẩm trước khi thanh toán. Sản phẩm của Easy-Shop trước khi gửi đi cho khách luôn luôn được kiểm tra rất kỹ càng qua 2 khâu:</p>
+                    <p dir="ltr">1. Sản phẩm vừa ra lò: Kiểm tra về men màu, có đều không? có bị lỗi men không? có bị ngấm nước không ?…</p>
+                    <p dir="ltr">2. Trước khi đóng hàng cho khách. Nhân viên đóng hàng sẽ kiểm tra lại các bước của khâu 1 để đảm bảo chắc chắn rằng sản phẩm tới tay khách hàng luôn luôn đẹp nhất.</p>
+                    <p dir="ltr"><b>b. Sản phẩm bị vỡ hỏng trong quá trình vận chuyển.</b></p>
+                    <p style="text-indent: 30px;" dir="ltr">Trong trường hợp sản phẩm bị hư hại trong quá trình vận chuyển, quý khách vui lòng từ chối và gửi lại sản phẩm cho Easy-Shop. Đồng thời thông báo cho nhân viên chăm sóc khách hàng của Easy-Shop chúng tôi sẽ gửi bù sản phẩm mới thay thế.</p>
+                    <p dir="ltr"><b>c. Sản phẩm giao không đúng theo đơn đặt hàng</b></p>
+                    <p style="text-indent: 30px;" dir="ltr">Quý khách nhận hàng kiểm tra sản phẩm và nghĩ rằng sản phẩm giao cho bạn không đúng với đơn đặt hàng? Hãy liên hệ với chúng tôi càng sớm càng tốt, nhân viên CSKH sẽ kiểm tra nếu hàng của bạn bị gửi nhầm. Chúng tôi sẽ thay thế đúng sản phẩm mà bạn đã đặt hàng.</p><br>
+                </div>
+                <h3 dir="ltr"><b>II. Điều kiện đổi trả hàng</b></h3>
+                <p dir="ltr"><b>Điều kiện về thời gian đổi trả: trong vòng 5 ngày kể từ khi nhận được hàng.</b></p>
+                <p style="text-indent: 30px;" dir="ltr">Khách hàng cung cấp được 1 trong những thông tin sau: Hóa đơn mua hàng tại Easy-Shop (nếu có), SĐT đặt hàng chính xác khi mua hàng, chúng tôi sẽ kiểm tra lịch sử mua hàng của bạn trên hệ thống phần mềm của Easy-Shop.</p>
+                <p dir="ltr"><strong><em>Điều kiện về sản phẩm: hàng hóa còn đầy đủ các bộ phận không nứt vỡ, không có dấu hiệu sử dụng.</em></strong></p><br>
+                <h3 dir="ltr"><b>III. Quy trình đổi trả hàng</b></h3>
+                <p dir="ltr">Bước 1: Liên hệ Trung tâm hỗ trợ khách hàng – Hotline: 0995 625 354 để thông báo về yêu cầu đổi, trả hàng. Quý khách cần chuẩn bị trước số điện thoại mua hàng, sản phẩm đã mua và ngày mua.</p>
+                <p dir="ltr">Bước 2: Sau khi Trung tâm hỗ trợ khách hàng tiếp nhận thông tin sẽ hướng dẫn cho quý khách địa điểm đổi trả hàng gần nhất. Quý khách có thể mang sản phẩm đến cửa hàng hoặc gửi chuyển phát nhanh về cửa hàng để đổi trả hàng.</p><br>
+                <p dir="ltr"><b>Cảm ơn quý khách!</b></p>
+
+                        <div role="tabpanel" class="tab-pane" id="changepass">
+                            <div class="headeraccount">
+                                <span class="fontyel">Đổi mật khẩu</span><span class="smyl"> (Để bảo mật tài khoản, vui lòng không chia sẻ mật khẩu cho người khác)</span>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12 passacc">
+                                <form action="javascript:changePassword()">
+                                    <label class="lbacc">Mật khẩu hiện tại *</label>
+                                    <input id="oldpass" type="password" class="form-control">
+                                    <label class="lbacc">Mật khẩu mới *</label>
+                                    <input id="newpass" type="password" class="form-control">
+                                    <label class="lbacc">Xác nhận mật khẩu mới *</label>
+                                    <input id="renewpass" type="password" class="form-control">
+                                    <br><button type="button" class="btnhuylogin" onclick="window.location.href='account'">HỦY</button>
+                                    <button type="submit" class="btntt">LƯU</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane active" id="address">
+                            <div class="headeraccount">
+                                <p class="fontyel">Địa chỉ của bạn</p>
+                                <div class="right_flex">
+                                    <button onclick="clearData()" data-bs-toggle="modal" data-bs-target="#modaladd" class="btnsuathongtin">+ Thêm địa chỉ mới</button>
+                                </div>
+                            </div>
+                            <div class="contentacc" id="listaddacc">
+                                <div class="row singleadd">
+                                    <div class="col-lg-11 col-md-11 col-sm-12 col-12">
+                                        <table class="table tableadd">
+                                            <tr>
+                                                <td class="tdleft">Họ tên:</td>
+                                                <td class="tdright">Hieu Tran
+                                                    <span class="addressdef"><i class="fa fa-check-circle"></i> Địa chỉ mặc định</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tdleft">Địa chỉ:</td>
+                                                <td class="tdright">gia lam, ha noi, viet nam, vietnam, Hà Nội, Vietnam</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tdleft">Số điện thoại:</td>
+                                                <td class="tdright">0382267161</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tdleft">Ngày tạo:</td>
+                                                <td class="tdright">2023-19-08</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-12 col-12">
+                                        <span data-bs-toggle="modal" data-bs-target="#modaladd" class="actionacc acsua">Sửa</span>
+                                        <span class="actionacc acdel">Xóa</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <div class="modal fade" id="modaladd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-fullscreen-sm-down modeladdres">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thêm địa chỉ mới</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-lg-12 col-md-12 col-sm-6 col-6 sinv">
                             <!-- <div nofi="infor" onclick="changeLink(this,'infor')" class="tabdv activetabdv">
                                 <a data-toggle="tab" href="#infor"><img class="imgau" src="image/user.svg"> Tài khoản của tôi</a>
                             </div> -->
@@ -137,99 +231,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="changepass">
-                            <div class="headeraccount">
-                                <span class="fontyel">Đổi mật khẩu</span><span class="smyl"> (Để bảo mật tài khoản, vui lòng không chia sẻ mật khẩu cho người khác)</span>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-12 passacc">
-                                <form action="javascript:changePassword()">
-                                    <label class="lbacc">Mật khẩu hiện tại *</label>
-                                    <input id="oldpass" type="password" class="form-control">
-                                    <label class="lbacc">Mật khẩu mới *</label>
-                                    <input id="newpass" type="password" class="form-control">
-                                    <label class="lbacc">Xác nhận mật khẩu mới *</label>
-                                    <input id="renewpass" type="password" class="form-control">
-                                    <br><button type="button" class="btnhuylogin" onclick="window.location.href='account'">HỦY</button>
-                                    <button type="submit" class="btntt">LƯU</button>
-                                </form>
-                            </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane active" id="address">
-                            <div class="headeraccount">
-                                <p class="fontyel">Địa chỉ của bạn</p>
-                                <div class="right_flex">
-                                    <button onclick="clearData()" data-bs-toggle="modal" data-bs-target="#modaladd" class="btnsuathongtin">+ Thêm địa chỉ mới</button>
-                                </div>
-                            </div>
-                            <div class="contentacc" id="listaddacc">
-                                <div class="row singleadd">
-                                    <div class="col-lg-11 col-md-11 col-sm-12 col-12">
-                                        <table class="table tableadd">
-                                            <tr>
-                                                <td class="tdleft">Họ tên:</td>
-                                                <td class="tdright">Hieu Tran
-                                                    <span class="addressdef"><i class="fa fa-check-circle"></i> Địa chỉ mặc định</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="tdleft">Địa chỉ:</td>
-                                                <td class="tdright">gia lam, ha noi, viet nam, vietnam, Hà Nội, Vietnam</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="tdleft">Số điện thoại:</td>
-                                                <td class="tdright">0382267161</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="tdleft">Ngày tạo:</td>
-                                                <td class="tdright">2023-19-08</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="col-lg-1 col-md-1 col-sm-12 col-12">
-                                        <span data-bs-toggle="modal" data-bs-target="#modaladd" class="actionacc acsua">Sửa</span>
-                                        <span class="actionacc acdel">Xóa</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="footer"></div>
-
-    <div class="modal fade" id="modaladd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-fullscreen-sm-down modeladdres">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Thêm địa chỉ mới</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <input type="hidden" id="idadduser">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-12 formadd">
-                            <input id="fullnameadd" class="form-control fomd" placeholder="Họ tên">
-                            <label class="lbsa">Họ tên</label>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-12 formadd">
-                            <input id="phoneadd" class="form-control fomd" placeholder="Số điện thoại">
-                            <label class="lbsa">Số điện thoại</label>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-12 formadd">
-                            <input id="stressadd" class="form-control fomd" placeholder="Tên đường, số nhà">
-                            <label class="lbsa">Tên đường, số nhà</label>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-12 formadd">
-                            <select onchange="loadHuyenOnchange()" id="tinh" class="form-control fomd">
-                                <option value="" hidden="" disabled>---</option>
-                                <option value="haf npio">hà nội</option>
-                            </select>
-                            <label class="lbsatop">Tỉnh thành</label>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12 col-12 formadd">
                             <select onchange="loadXaOnchange()" id="huyen" class="form-control fomd">
@@ -318,6 +319,90 @@
                                     <span>Mã sản phẩm: STM6099-DEN-L</span><br>
                                     <span class="slmobile">SL: 1</span>
                                 </td>
+								<div class="col-lg-12 col-md-12 col-sm-6 col-6 sinv">
+                            <!-- <div nofi="infor" onclick="changeLink(this,'infor')" class="tabdv activetabdv">
+                                <a data-toggle="tab" href="#infor"><img class="imgau" src="image/user.svg"> Tài khoản của tôi</a>
+                            </div> -->
+                            <div onclick="changeLink(this,'address')" class="tabdv activetabdv">
+                                <a data-toggle="tab" href="#address"><img class="imgau" src="image/add.svg"> Sổ địa chỉ</a>
+                            </div>
+                            <div onclick="changeLink(this,'invoice')" class="tabdv">
+                                <a data-toggle="tab" href="#invoice"><img class="imgau" src="image/invoice.svg"> Đơn hàng của tôi</a>
+                            </div>
+                            <div onclick="changeLink(this,'changepass')" class="tabdv">
+                                <a data-toggle="tab" href="#changepass"><img class="imgau" src="image/pass.svg"> Đổi mật khẩu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-12 collistcart">
+                <div class="navright">
+                    <div class="tab-content contentab">
+                        <div role="tabpanel" class="tab-pane" id="invoice">
+                            <div class="headeraccount">
+                                <p class="fontyel">Đơn hàng của tôi</p>
+                                <span>(Nhấp vào mã đơn hàng để xem chi tiêt)</span>
+                                <div class="right_flex">
+                                    <span class="textrf" id="sldonhang">0 đơn hàng</span>
+                                </div>
+                            </div>
+                            <table class="table table-cart table-order" id="my-orders-table">
+                                <thead class="thead-default">
+                                    <tr>
+                                        <th>Mã đơn hàng</th>
+                                        <th class="floatr">Ngày mua</th>
+                                        <th>Địa chỉ</th>
+                                        <th class="floatr">Giá trị<br>đơn hàng</th>
+                                        <th>Trạng thái thanh toán</th>
+                                        <th class="floatr">Trạng thái vận chuyển</th>
+                                        <th>Hủy</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listinvoice">
+                                    <tr>
+                                        <td><a data-bs-toggle="modal" data-bs-target="#modaldeail" class="yls pointer-event">#115871</a></td>
+                                        <td class="floatr">11:37 21/09/2023</td>
+                                        <td>gia lam, ha noi, viet nam, vietnam,Quận Đống Đa, Hà Nội, Vietnam</td>
+                                        <td class="floatr"><span class="yls">289.000đ</span></td>
+                                        <td><span class="span_pending">Chưa thu tiền</span></td>
+                                        <td class="floatr"><span class="span_">Chưa chuyển</span></td>
+                                        <td><i class="fa fa-trash-o huydon"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-cart table-order" id="ordermobile">
+                                <tbody id="listinvoicemb">
+                                    <tr class="trmobile">
+                                        <td style="width: 40%;">Đơn hàng</td>
+                                        <td class="position-relative">
+                                            <a data-bs-toggle="modal" data-bs-target="#modaldeail" class="yls iddhmb pointer-event">#115871</a>
+                                            <span class="huymobile">Hủy đơn</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ngày: </td>
+                                        <td>11:37 21/09/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Địa chỉ: </td>
+                                        <td>gia lam, ha noi, viet nam, vietnam, Quận Đống Đa, Hà Nội, Vietnam</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Giá trị đơn hàng:</td>
+                                        <td class="yls">289.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TT Thanh toán:</td>
+                                        <td>Chưa thanh toán</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TT Vận chuyển:<br><br></td>
+                                        <td>Chưa chuyển</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                                 <td>269.000đ</td>
                                 <td class="sldetailacc">1</td>
                                 <td class="pricedetailacc yls">269.000đ</td>
