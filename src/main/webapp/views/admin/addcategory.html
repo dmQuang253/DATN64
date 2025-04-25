@@ -28,6 +28,24 @@
                         <input id="primaryCate" type="checkbox">
                         <span class="checkmark-checkbox"></span>
                     </label><br>
+                    <div class="inner-wrapper">
+        <th:block th:replace="fragment/sidebarAdmin :: sidenavAdmin"></th:block>
+        <section role="main" class="content-body" id="main-content">
+            <th:block th:replace="fragment/sidebarAdmin :: pageHeader"></th:block>
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="inner-wrapper">
+        <th:block th:replace="fragment/sidebarAdmin :: sidenavAdmin"></th:block>
+        <section role="main" class="content-body" id="main-content">
+            <th:block th:replace="fragment/sidebarAdmin :: pageHeader"></th:block>
+            <div class="row">
+                <div class="col-sm-5">
+                    <label class="lb-form">Tên danh mục</label>
+                    <input id="catename" type="text" class="form-control">
+                    <label class="checkbox-custom">Danh mục chính
+                        <input id="primaryCate" type="checkbox">
+                        <span class="checkmark-checkbox"></span>
+                    </label><br>
                     <label class="lb-form">Ảnh danh mục</label>
                     <input id="fileimage" type="file" class="form-control">
                     <img id="imgpreview" style="width: 120px; margin-top: 15px;margin-bottom: 15px;display: block;">
@@ -35,6 +53,29 @@
                     <select id="listdpar" class="form-control" style="z-index: 10000;">
                         <option value=""></option>
                     </select>
+                    <br><br>
+                    <button onclick="saveCategory()" class="btn btn-success form-control action-btn">Thêm/ Cập nhật danh mục</button>
+                </div>
+            </div>
+        </section>
+    </div>
+                    <label class="lb-form">Ảnh bài viết</label>
+                    <input id="fileimage" type="file" class="form-control">
+                    <img id="imgpreview" style="width: 120px; margin-top: 15px;margin-bottom: 15px;display: block;">
+                    <label class="lb-form">Mô tả</label>
+                    <textarea id="description" class="form-control" style="height: 200px;"></textarea>
+                </div>
+                <div class="col-md-7">
+                    <label>Nội dung</label>
+                    <textarea id="editor" name="content"></textarea>
+                    <div id="loading">
+                        <div class="bar1 bar"></div>
+                    </div><br>
+                    <button onclick="saveBlog()" class="btn btn-success form-control action-btn">Thêm/ Cập nhật bài viết</button>
+                </div>
+            </div>
+        </section>
+    </div>
                     <br><br>
                     <button onclick="saveCategory()" class="btn btn-success form-control action-btn">Thêm/ Cập nhật danh mục</button>
                 </div>
