@@ -117,10 +117,116 @@ async function addAddressUser() {
                 window.location.reload();
             });
     }
-    if (response.status == exceptionCode) {
-        var result = await response.json()
+    if (res.status < 300) {
+        swal({
+                title: "",
+                text: "mật khẩu mới đã được gửi về email của bạn",
+                type: "success"
+            },
+            function() {
+                window.location.replace("login")
+            });
+    }
+    if (res.status == exceptionCode) {
+        var result = await res.json()
         toastr.warning(result.defaultMessage);
     }
+}
+
+async function changePassword() {
+    var token = localStorage.getItem("token");
+    var oldpass = document.getElementById("oldpass").value
+    var newpass = document.getElementById("newpass").value
+    var renewpass = document.getElementById("renewpass").value
+    var url = 'http://localhost:8080/api/user/change-password';
+    if (res.status < 300) {
+        swal({
+                title: "",
+                text: "mật khẩu mới đã được gửi về email của bạn",
+                type: "success"
+            },
+            function() {
+                window.location.replace("login")
+            });
+    }
+    if (res.status == exceptionCode) {
+        var result = await res.json()
+        toastr.warning(result.defaultMessage);
+    }
+}
+
+async function changePassword() {
+    var token = localStorage.getItem("token");
+    var oldpass = document.getElementById("oldpass").value
+    var newpass = document.getElementById("newpass").value
+    var renewpass = document.getElementById("renewpass").value
+    var url = 'http://localhost:8080/api/user/change-password';
+    if (newpass != renewpass) {
+        alert("mật khẩu mới không trùng khớp");
+        return;
+    }
+    var passw = {
+        "oldPass": oldpass,
+        "newPass": newpass
+    }
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: new Headers({
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify(passw)
+    });
+    async function loadXa(idHuyen, idtinh) {
+    for (n = 0; n < list.length; n++) {
+        if (list[n].id == idtinh) {
+            var huyen = list[n].districts;
+            for (x = 0; x < huyen.length; x++) {
+                if (huyen[x].id == idHuyen) {
+                    var xa = huyen[x].wards;
+                    var main = ''
+                    for (k = 0; k < xa.length; k++) {
+                        main += `<option value="${xa[k].id}">${xa[k].name}</option>`
+                    }
+                    document.getElementById("xa").innerHTML = main
+                    break;
+                }
+            }
+            break;
+        }
+    }
+}
+    var passw = {
+        "oldPass": oldpass,
+        "newPass": newpass
+    }
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: new Headers({
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify(passw)
+    });
+    async function loadXa(idHuyen, idtinh) {
+    for (n = 0; n < list.length; n++) {
+        if (list[n].id == idtinh) {
+            var huyen = list[n].districts;
+            for (x = 0; x < huyen.length; x++) {
+                if (huyen[x].id == idHuyen) {
+                    var xa = huyen[x].wards;
+                    var main = ''
+                    for (k = 0; k < xa.length; k++) {
+                        main += `<option value="${xa[k].id}">${xa[k].name}</option>`
+                    }
+                    document.getElementById("xa").innerHTML = main
+                    break;
+                }
+            }
+            break;
+        }
+    }
+}
 }
 
 
@@ -158,18 +264,33 @@ async function loadAddressUserSelect() {
     });
     var list = await response.json();
     var main = '';
-    var addressUser = null
-    for (i = 0; i < list.length; i++) {
-        listAddUser.push(list[i]);
-        var check = ''
-        if (list[i].primaryAddres == true) {
-            check = 'selected';
-            addressUser = list[i];
-        }
-        main += `<option ${check} value="${list[i].id}">${list[i].fullname}, ${list[i].streetName}, ${list[i].wards.name}, ${list[i].wards.districts.name}, ${list[i].wards.districts.province.name}</option>`
+        var url = 'http://localhost:8080/api/user-address/user/create';
+    if (id != "" && id != null) {
+        url = 'http://localhost:8080/api/user-address/user/update';
     }
-    document.getElementById("sodiachi").innerHTML = main;
-    loadAddInfor();
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: new Headers({
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify(addu)
+    });
+    if (response.status < 300) {
+        swal({
+                title: "Thông báo",
+                text: "Thành công",
+                type: "success"
+            },
+            function() {
+                window.location.reload();
+            });
+    }
+    if (response.status == exceptionCode) {
+        var result = await response.json()
+        toastr.warning(result.defaultMessage);
+    }
+}
 }
 
 async function loadAddInfor() {
