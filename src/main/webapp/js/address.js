@@ -7,7 +7,20 @@ async function loadAddress() {
         headers: new Headers({})
     });
     list = await response.json();
-    var main = `<option value="" hidden="">---Chọn tỉnh---</option>`
+    if (res.status < 300) {
+        swal({
+                title: "Thông báo",
+                text: "Xác nhận tài khoản thành công!",
+                type: "success"
+            },
+            function() {
+                window.location.href = 'login'
+            });
+    }
+    if (res.status == exceptionCode) {
+        var result = await res.json()
+        toastr.warning(result.defaultMessage);
+    }
     for (i = 0; i < list.length; i++) {
         main += `<option value="${list[i].id}">${list[i].name}</option>`
     }
@@ -31,23 +44,33 @@ async function loadHuyen(idtinh) {
 }
 
 async function loadXa(idHuyen, idtinh) {
-    for (n = 0; n < list.length; n++) {
-        if (list[n].id == idtinh) {
-            var huyen = list[n].districts;
-            for (x = 0; x < huyen.length; x++) {
-                if (huyen[x].id == idHuyen) {
-                    var xa = huyen[x].wards;
-                    var main = ''
-                    for (k = 0; k < xa.length; k++) {
-                        main += `<option value="${xa[k].id}">${xa[k].name}</option>`
-                    }
-                    document.getElementById("xa").innerHTML = main
-                    break;
-                }
-            }
-            break;
-        }
+        var url = 'http://localhost:8080/api/user-address/user/create';
+    if (id != "" && id != null) {
+        url = 'http://localhost:8080/api/user-address/user/update';
     }
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: new Headers({
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify(addu)
+    });
+    if (response.status < 300) {
+        swal({
+                title: "Thông báo",
+                text: "Thành công",
+                type: "success"
+            },
+            function() {
+                window.location.reload();
+            });
+    }
+    if (response.status == exceptionCode) {
+        var result = await response.json()
+        toastr.warning(result.defaultMessage);
+    }
+}
 }
 
 async function loadHuyenOnchange() {
