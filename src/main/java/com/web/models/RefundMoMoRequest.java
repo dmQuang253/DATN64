@@ -32,17 +32,38 @@ public class RefundMoMoRequest extends Request {
         this.transId = transId;
     }
 
-    public Long getAmount() {
-        return amount;
+    public String getPartnerCode() {
+        return partnerCode;
     }
 
-    public void setAmount(Long amount) {
-        this.amount = amount;
+    public void setPartnerCode(String partnerCode) {
+        this.partnerCode = partnerCode;
     }
 
-    public String getSignature() {
-        return signature;
+    public String getRequestId() {
+        return requestId;
     }
+
+    public void setRequestId(String requestId) {
+        this.requestId = requestId;
+    }
+
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    public String getLang() {
+        return lang.getLanguage();
+    }
+
+    public void setLang(Language lang) {
+        this.lang = lang;
+    }
+
 
     public void setSignature(String signature) {
         this.signature = signature;

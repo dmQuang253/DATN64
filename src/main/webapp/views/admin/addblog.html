@@ -21,12 +21,67 @@
             <th:block th:replace="fragment/sidebarAdmin :: pageHeader"></th:block>
             <div class="row">
                 <div class="col-sm-5">
-                    <label class="lb-form">Tiêu đề blog</label>
-                    <input id="title" type="text" class="form-control">
-                    <label class="checkbox-custom">Blog chính
-                        <input id="primaryBlog" type="checkbox">
+                    <div class="inner-wrapper">
+        <th:block th:replace="fragment/sidebarAdmin :: sidenavAdmin"></th:block>
+        <section role="main" class="content-body" id="main-content">
+            <th:block th:replace="fragment/sidebarAdmin :: pageHeader"></th:block>
+            <div class="row">
+                <div class="col-sm-5">
+                    <label class="lb-form">Tên danh mục</label>
+                    <input id="catename" type="text" class="form-control">
+                    <label class="checkbox-custom">Danh mục chính
+                        <input id="primaryCate" type="checkbox">
                         <span class="checkmark-checkbox"></span>
                     </label><br>
+                    <label class="lb-form">Ảnh danh mục</label>
+                    <input id="fileimage" type="file" class="form-control">
+                    <img id="imgpreview" style="width: 120px; margin-top: 15px;margin-bottom: 15px;display: block;">
+                    <label class="lb-form">Danh mục cha</label>
+                    <select id="listdpar" class="form-control" style="z-index: 10000;">
+                        <option value=""></option>
+                    </select>
+                    <br><br>
+                    <button onclick="saveCategory()" class="btn btn-success form-control action-btn">Thêm/ Cập nhật danh mục</button>
+                </div>
+            </div>
+			<div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Thêm cập nhật</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+            <div class="inner-wrapper">
+        <th:block th:replace="fragment/sidebarAdmin :: sidenavAdmin"></th:block>
+        <section role="main" class="content-body" id="main-content">
+            <th:block th:replace="fragment/sidebarAdmin :: pageHeader"></th:block>
+            <div class="row">
+                <div class="inner-wrapper">
+        <th:block th:replace="fragment/sidebarAdmin :: sidenavAdmin"></th:block>
+        <section role="main" class="content-body" id="main-content">
+            <th:block th:replace="fragment/sidebarAdmin :: pageHeader"></th:block>
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="inner-wrapper">
+        <th:block th:replace="fragment/sidebarAdmin :: sidenavAdmin"></th:block>
+        <section role="main" class="content-body" id="main-content">
+            <th:block th:replace="fragment/sidebarAdmin :: pageHeader"></th:block>
+            <div class="row">
+                <div class="col-sm-5">
+                    <label class="lb-form">Tên danh mục</label>
+                    <input id="catename" type="text" class="form-control">
+                    <label class="checkbox-custom">Danh mục chính
+                        <input id="primaryCate" type="checkbox">
+                        <span class="checkmark-checkbox"></span>
+                    </label><br>
+                    <label class="lb-form">Ảnh danh mục</label>
+                    <input id="fileimage" type="file" class="form-control">
+                    <img id="imgpreview" style="width: 120px; margin-top: 15px;margin-bottom: 15px;display: block;">
+                    <label class="lb-form">Danh mục cha</label>
+                    <select id="listdpar" class="form-control" style="z-index: 10000;">
+                        <option value=""></option>
+                    </select>
+                    <br><br>
+                    <button onclick="saveCategory()" class="btn btn-success form-control action-btn">Thêm/ Cập nhật danh mục</button>
+                </div>
+        </section>
+    </div>
                     <label class="lb-form">Ảnh bài viết</label>
                     <input id="fileimage" type="file" class="form-control">
                     <img id="imgpreview" style="width: 120px; margin-top: 15px;margin-bottom: 15px;display: block;">

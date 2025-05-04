@@ -36,10 +36,91 @@
                         <button onclick="loadByNam()" class="btn btn-primary form-control" style="margin-top: 10px;"><i class="fa fa-filter"></i> Lọc</button>
                     </div>
                 </div>
-                <div class="col-sm-12 divtale">
-                    <div class="card chart-container divtale">
-                        <canvas id="chart"></canvas>
-                    </div>
+                <div class="inner-wrapper">
+        <th:block th:replace="fragment/sidebarAdmin :: sidenavAdmin"></th:block>
+        <section role="main" class="content-body" id="main-content">
+            <th:block th:replace="fragment/sidebarAdmin :: pageHeader"></th:block>
+            <div class="row">
+                <div class="inner-wrapper">
+        <th:block th:replace="fragment/sidebarAdmin :: sidenavAdmin"></th:block>
+        <section role="main" class="content-body" id="main-content">
+            <th:block th:replace="fragment/sidebarAdmin :: pageHeader"></th:block>
+            <div class="row">
+                <div class="row">
+                <div class="col-sm-5">
+                    <label class="lb-form">Tên danh mục</label>
+                    <input id="catename" type="text" class="form-control">
+                    <div class="row">
+                <div class="col-sm-5">
+                    <label class="lb-form">Tên danh mục</label>
+                    <input id="catename" type="text" class="form-control">
+                    <label class="checkbox-custom">Danh mục chính
+                        <input id="primaryCate" type="checkbox">
+                        <span class="checkmark-checkbox"></span>
+                    </label><br>
+                    <label class="lb-form">Ảnh danh mục</label>
+                    <input id="fileimage" type="file" class="form-control">
+                    <img id="imgpreview" style="width: 120px; margin-top: 15px;margin-bottom: 15px;display: block;">
+                    <label class="lb-form">Danh mục cha</label>
+                    <select id="listdpar" class="form-control" style="z-index: 10000;">
+                        <option value=""></option>
+                    </select>
+                    <br><br>
+                    <button onclick="saveCategory()" class="btn btn-success form-control action-btn">Thêm/ Cập nhật danh mục</button>
+                </div>
+            </div>
+                    <label class="lb-form">Ảnh danh mục</label>
+                    <input id="fileimage" type="file" class="form-control">
+                    <img id="imgpreview" style="width: 120px; margin-top: 15px;margin-bottom: 15px;display: block;">
+                    <label class="lb-form">Danh mục cha</label>
+                    <div class="row">
+                <div class="col-sm-5">
+                    <label class="lb-form">Tên danh mục</label>
+                    <input id="catename" type="text" class="form-control">
+                    <div class="row">
+                <div class="col-sm-5">
+                    <label class="lb-form">Tên danh mục</label>
+                    <input id="catename" type="text" class="form-control">
+                    <label class="checkbox-custom">Danh mục chính
+                        <input id="primaryCate" type="checkbox">
+                        <span class="checkmark-checkbox"></span>
+                    </label><br>
+                    <label class="lb-form">Ảnh danh mục</label>
+                    <input id="fileimage" type="file" class="form-control">
+                    <img id="imgpreview" style="width: 120px; margin-top: 15px;margin-bottom: 15px;display: block;">
+                    <label class="lb-form">Danh mục cha</label>
+                    <select id="listdpar" class="form-control" style="z-index: 10000;">
+                        <option value=""></option>
+                    </select>
+                    <br><br>
+                    <button onclick="saveCategory()" class="btn btn-success form-control action-btn">Thêm/ Cập nhật danh mục</button>
+                </div>
+            </div>
+                    <label class="lb-form">Ảnh danh mục</label>
+                    <input id="fileimage" type="file" class="form-control">
+                    <img id="imgpreview" style="width: 120px; margin-top: 15px;margin-bottom: 15px;display: block;">
+                    <label class="lb-form">Danh mục cha</label>
+                    <select id="listdpar" class="form-control" style="z-index: 10000;">
+                        <option value=""></option>
+                    </select>
+                    <br><br>
+                    <button onclick="saveCategory()" class="btn btn-success form-control action-btn">Thêm/ Cập nhật danh mục</button>
+                </div>
+            </div>
+                    <br><br>
+                    <button onclick="saveCategory()" class="btn btn-success form-control action-btn">Thêm/ Cập nhật danh mục</button>
+                </div>
+            </div>
+                <div class="col-sm-5">
+                    <label class="lb-form">Từ ngày</label>
+                    <input id="from" type="date" class="form-control">
+                    <label class="lb-form">Đến ngày</label>
+                    <input id="to" type="date" class="form-control">
+                    <label class="checkbox-custom">Khóa voucher
+                        <input id="lockvoucher" type="checkbox">
+                        <span class="checkmark-checkbox"></span>
+                    </label><br>
+                    <button onclick="saveVoucher()" class="btn btn-success form-control action-btn">Thêm/ Cập nhật voucher</button>
                 </div>
             </div>
         </section>

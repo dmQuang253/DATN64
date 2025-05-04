@@ -45,28 +45,153 @@
 
                 <br><br>
 				
-				<div class="col-lg-12 col-md-12 col-sm-6 col-6">
-                            <div class="avaaccount">
-                                <img src="image/avatar.webp" class="avataracc">
-                                <button onclick="logout()" class="btnlogoutacc">Đăng xuất</button>
-                            </div>
+				<div class="col-lg-4 col-md-7 col-sm-12 col-12">
+                <span class="detailnamepro" id="detailnamepro">name</span>
+                <div class="blockdetailpro">
+                    <span class="codepro" id="codepro">STM6099-DEN</span>
+                    <span class="quansale" id="quansale">Đã bán 5.0K</span>
+                </div>
+                <p class="pricedetail" id="pricedetail">269.000đ</p>
+                <p class="pricedetail" id="thuonghieu"></p>
+                <p class="pricedetail" id="chatlieu"></p>
+                <p class="pricedetail" id="degiay"></p>
+                <span class="colordetail">Màu sắc: <span class="colorname" id="colorname">Đen</span></span>
+                <div class="listimgdetail row" id="listimgColor">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 singdimg">
+                        <img onclick="clickImgdetail(this)" src="image/sp1.webp" class="imgldetail imgactive">
+                    </div>
+                </div>
+                <span class="colordetail">Kích thước</span>
+                <div class="listsize row" id="listsize">
+                    <!-- <div class="colsize col-lg-2 col-md-2 col-sm-2 col-2">
+                        <label onclick="clickSize(this)" class="radio-custom" for="size1">S
+                            <input value="S" type="radio" name="sizepro" id="size1">
+                        </label>
+                    </div> -->
+                </div>
+                <span data-bs-toggle="modal" data-bs-target="#modalsize" class="choosesize"><img src="image/size.svg"><span> Giúp bạn chọn size</span></span>
+                <div class="addcartdetail">
+                    <button onclick="upAndDownDetail(-1)" class="cartbtn"> - </button>
+                    <input id="inputslcart" class="inputslcart" value="1">
+                    <button onclick="upAndDownDetail(1)" class="cartbtn"> + </button></div>
+                <div class="btndetail">
+                    <button id="btnaddcart" class="btnaddcart"><i class="fa fa-shopping-cart"></i> Thêm giỏ hàng</button>
+                    <button id="btnaddmuangay" class="btnmuangay">Mua ngay</button>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 col-sm-12 col-12">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 align-items-center">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="image/free.svg">
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-6 col-6 sinv">
-                            <!-- <div nofi="infor" onclick="changeLink(this,'infor')" class="tabdv activetabdv">
-                                <a data-toggle="tab" href="#infor"><img class="imgau" src="image/user.svg"> Tài khoản của tôi</a>
-                            </div> -->
-                            <div onclick="changeLink(this,'address')" class="tabdv activetabdv">
-                                <a data-toggle="tab" href="#address"><img class="imgau" src="image/add.svg"> Sổ địa chỉ</a>
-                            </div>
-                            <div onclick="changeLink(this,'invoice')" class="tabdv">
-                                <a data-toggle="tab" href="#invoice"><img class="imgau" src="image/invoice.svg"> Đơn hàng của tôi</a>
-                            </div>
-                            <div onclick="changeLink(this,'changepass')" class="tabdv">
-                                <a data-toggle="tab" href="#changepass"><img class="imgau" src="image/pass.svg"> Đổi mật khẩu</a>
+                        <div class="titledetail">Miễn phí vận chuyển<br>với mọi đơn hàng từ 498k</div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 align-items-center">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="image/freedt.svg">
+                        </div>
+                        <div class="titledetail">Miễn phí đổi trả tại 230+ cửa hàng trong 15 ngày</div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 align-items-center">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="image/pay.svg">
+                        </div>
+                        <div class="titledetail">Đa dạng phương thức thanh toán<br>(Momo, COD)</div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 align-items-center">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="image/vc.svg">
+                        </div>
+                        <div class="titledetail">Vận chuyển siêu tốc <br>từ 1 đến 3 ngày</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 motasp">
+                <p class="titledes">Mô tả sản phẩm</p>
+                <div id="descriptiondetail">
+                </div>
+                <span onclick="readmore()" class="readmore">Đọc thêm mô tả</span>
+            </div>
+            <div class="col-lg-7 col-md-8 col-sm-12 col-12">
+                <p class="titledes">Phản hổi</p>
+                <div class="listcautlct" id="listcautlct">
+                    <div class="singlectlct">
+                        <div class="row">
+                            <div class="col-11">
+                                <div class="d-flex nguoidangctl">
+                                    <img class="avtuserdangctl" src="image/avatar.webp">
+                                    <span class="usernamedangctl">Username</span>
+                                    <span class="ngaytraloi">16-07-2023</span>
+                                </div>
+                                <div class="contentctlct">Mua với giá dùng thử 269K thấy sản phẩm năm nay chất lượng đã cải tiến hơn nhiều, giao hàng cũng nhanh hơn. đặt ở web nên yên tâm không gặp lừa đảo hàng nhái vì mình bị gặp mấy lần rồi. cảm ơn shop!</div>
+                                <div class="listimgcontent">
+                                    <img src="image/sp1.webp">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-sm-12 col-12" id="mycomment">
+                    <div class="liststar" id="liststar">
+                        <span onclick="loadStar(0)" class="fa fa-star checkedstar"></span>
+                        <span onclick="loadStar(1)" class="fa fa-star checkedstar"></span>
+                        <span onclick="loadStar(2)" class="fa fa-star checkedstar"></span>
+                        <span onclick="loadStar(3)" class="fa fa-star checkedstar"></span>
+                        <span onclick="loadStar(4)" class="fa fa-star checkedstar"></span>
+                    </div>
+
+                    <label id="titlerep" class="lb-chon-danhmuc">Bình luận của bạn</label>
+                    <textarea id="noidungbl" class="form-control"></textarea>
+                    <div onclick="choosefilecmt.click()" class="divchooseimg">
+                        <img src="image/addimg.png">
+                        <span id="slfile">Đính kèm hình ảnh (chọn tối đa 3 hình)</span>
+                        <span id="errorquan">Chỉ được chọn tối đa 3 ảnh</span>
+                        <input onchange="setFile()" type="file" id="choosefilecmt" multiple>
+                    </div>
+                    <button onclick="saveComment()" class="btn btn-primary form-control">Binh luận</button>
+                </div>
+            </div>
+            <div class="col-lg-12 goiysp">
+                <p class="titledes">Gợi ý sản phẩm</p>
+                <div class="row" id="listProductGy">
+                    <!-- <div class="col-lg-20p col-md-3 col-sm-6 col-6">
+                        <a href="" class="linkpro">
+                            <div class="singlepro">
+                                <div class="productsold"><span class="reviewsp">Đã bán: 250</span></div>
+                                <img src="image/sp1.webp" class="imgpro">
+                                <span class="proname">Women's Casual Pants With Waist Belt</span>
+                                <span class="proprice">499.000đ</span>
+                                <div class="listimgpro">
+                                    <div class="divimgsmpro"><img class="imgsmpro" src="image/sp2.webp"></div>
+                                    <div class="divimgsmpro"><img class="imgsmpro" src="image/sp3.webp"></div>
+                                    <div class="divimgsmpro"><img class="imgsmpro" src="image/sp4.webp"></div>
+                                    <div class="divimgsmpro"><img class="imgsmpro" src="image/sp5.webp"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+
+    <div class="modal fade" id="modalsize" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-fullscreen-sm-down modeladdres">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Hướng dẫn chọn size</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="image/huongdan.jpg" style="width: 100%;">
+                </div>
+            </div>
+        </div>
             </div>
             <div class="col-lg-9 col-md-9 col-sm-12 col-12 collistcart">
                 <div class="navright">

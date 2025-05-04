@@ -17,12 +17,40 @@ public class HttpRequest {
         return method;
     }
 
-    public void setMethod(String method) {
-        this.method = method;
+    public Long getTransId() {
+        return transId;
     }
 
-    public String getEndpoint() {
-        return endpoint;
+    public void setTransId(Long transId) {
+        this.transId = transId;
+    }
+
+    public String getPartnerCode() {
+        return partnerCode;
+    }
+
+    public void setPartnerCode(String partnerCode) {
+        this.partnerCode = partnerCode;
+    }
+
+    public String getRequestId() {
+        return requestId;
+    }
+
+    public void setRequestId(String requestId) {
+        this.requestId = requestId;
+    }
+
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    public String getLang() {
+        return lang.getLanguage();
     }
 
     public void setEndpoint(String endpoint) {
