@@ -30,51 +30,14 @@ public class HttpResponse {
         this.data = data;
     }
 
-    protected String message;
-
-    private String partnerCode;
-    private String orderId;
-    protected Integer resultCode;
-
-    public Response() {
-        this.responseTime = System.currentTimeMillis();
+    public Headers getHeaders() {
+        return headers;
     }
 
-    public void setResponseTime(long responseTime) {
-        this.responseTime = responseTime;
+    public void setHeaders(Headers headers) {
+        this.headers = headers;
     }
 
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public String getPartnerCode() {
-        return partnerCode;
-    }
-
-    public void setPartnerCode(String partnerCode) {
-        this.partnerCode = partnerCode;
-    }
-
-    public String getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
-    }
-
-    public Integer getResultCode() {
-        return resultCode;
-    }
-
-    public void setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
-    }
     public String toString() {
         return "HttpStatusCode:: " + this.status + ", ResponseBody:: " + this.data;
     }
