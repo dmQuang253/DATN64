@@ -85,6 +85,102 @@
 
 /* Create a custom checkbox */
 
+.divimgsmpro {
+    width: 16.667%;
+    float: left;
+}
+
+.imgsmpro {
+    aspect-ratio: 1 / 1;
+    width: 70%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.listimgpro {
+    margin-top: 10px;
+}
+
+.productsold {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    padding: 5px;
+}
+
+.reviewsp {
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.listdmproduct {
+    margin-top: 10px;
+}
+
+.singledmpro {
+    border: 1px solid #e0e0d1;
+    display: flex;
+    padding: 30px 0px 30px 30px;
+    margin-top: 15px;
+}
+
+.imgcatepro {
+    aspect-ratio: 1 / 1;
+    width: 30%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.namedmpro {
+    line-height: 60px;
+    margin-left: 10px;
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.title-block {
+    color: #fcaf17;
+    text-align: center;
+    font-family: 'SVN-Gilroy Med';
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.filter {
+    padding-top: 40px;
+}
+
+.checkbox-custom {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.checkbox-custom input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
 .checkmark-checkbox {
     position: absolute;
     top: 0;
@@ -175,6 +271,439 @@
 .lb-chon-danhmuc {
     font-weight: bold;
 }
+
+.filterdiv {
+    margin-top: 20px;
+    background-color: #fff3cd;
+    padding: 10px 10px 10px 10px;
+}
+
+.filterdiv>select {
+    float: right;
+}
+
+.slsanpham {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    line-height: 40px;
+}
+
+.filtersp {
+    cursor: pointer;
+    margin-left: 15px;
+    line-height: 40px;
+    display: none;
+}
+
+#sortpro {
+    width: 180px;
+    border: 1px solid #ebebe0;
+    border-radius: 5px;
+}
+
+.loginform {
+    margin: auto;
+    background-color: #fff;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.titellogin {
+    color: #595959;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 2rem;
+}
+
+.dangtl {
+    color: #151560 !important;
+    font-weight: 700;
+    font-family: 'SVN-Gilroy Bold';
+    font-size: 26px;
+}
+
+.kytl {
+    color: #fcaf17 !important;
+    font-weight: 700;
+    font-family: 'SVN-Gilroy Bold';
+    font-size: 26px;
+}
+
+.plogintl {
+    text-align: center;
+}
+
+.inputloginform {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.inputform {
+    height: 48px;
+    line-height: 48px;
+    margin-bottom: 10px;
+    padding: 0 18px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #e0e0d1;
+}
+
+.btndn {
+    display: inline-block;
+    width: calc(50% - 5px);
+    height: 48px;
+    line-height: 48px;
+    background: #fcaf17;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: 'SVN-Gilroy Bold';
+    margin-bottom: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.linkquenmk {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.aquenmk {
+    color: #FCAF17;
+}
+
+.nothvaccount {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.noteregis {
+    text-align: center;
+    width: 385px;
+    margin: 0 auto 10px;
+    padding: 0;
+    display: block;
+    text-align: center;
+    max-width: 100%;
+    font-size: 0.9rem;
+}
+
+.btnhuylogin {
+    width: 49%;
+    border: none;
+    font-family: 'SVN-Gilroy Bold';
+    line-height: 48px;
+    background: #FEEEEA;
+    color: #fcaf17;
+    text-align: center;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.btnhuylogin:hover {
+    background: #fcaf17;
+    color: #fff;
+}
+
+.btntt {
+    width: 49%;
+    float: right;
+    font-family: 'SVN-Gilroy Bold';
+    line-height: 48px;
+    background: #fcaf17;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.contentcart {
+    background-color: #f8f8f8;
+    padding-bottom: 100px;
+}
+
+.cartbds {
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.listcart {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cartname {
+    text-transform: uppercase!important;
+    font-family: 'SVN-Gilroy Bold';
+    font-size: 16px;
+    border-radius: 4px 4px 0 0;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.slcarts {
+    color: #7A7A9D;
+    font-family: 'SVN-Gilroy';
+    font-weight: 500;
+}
+
+.ttcart {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    height: auto;
+}
+
+.tongdon {
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+
+.btnthanhtoan {
+    position: absolute;
+    right: 0;
+    height: 40px;
+    background-color: #fcaf17;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'SVN-Gilroy Bold';
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+}
+
+.tonggiatien {
+    color: #000;
+    font-size: 1.1rem;
+    font-family: 'SVN-Gilroy Bold';
+    font-weight: bold;
+}
+
+.tds {
+    font-family: 'SVN-Gilroy Bold';
+    font-weight: 500;
+}
+
+.freeship {
+    font-weight: 700 !important;
+    color: rgb(57, 172, 109) !important;
+    font-family: Insider-Montserrat, sans-serif !important;
+    font-style: normal !important;
+    font-size: 14px !important;
+    text-decoration: none !important;
+    text-align: left !important;
+}
+
+.buypl {
+    font-weight: 700 !important;
+    color: rgb(57, 172, 109) !important;
+    font-family: Insider-Montserrat, sans-serif !important;
+}
+
+.cartbtn {
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+    width: 37px;
+    background-color: #fff;
+    height: 36px;
+    float: left;
+    border: 1px solid #D9D9D9;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #62676D;
+    font-size: 20px;
+}
+
+.inputslcart {
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+    width: 37px;
+    background-color: #fff;
+    height: 36px;
+    float: left;
+    border: 1px solid #D9D9D9;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #62676D;
+    font-size: 20px;
+}
+
+.imgprocart {
+    width: 100px;
+    float: left;
+}
+
+.divnamecart {
+    padding-left: 10px;
+    position: relative;
+    height: 100px;
+    margin-left: 100px;
+}
+
+.sizecart {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}
+
+.tdpricecart {
+    position: relative;
+    height: 100px;
+}
+
+.delcart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tablecart td,
+tfoot,
+th,
+thead,
+tr {
+    border-style: none !important;
+}
+
+.tablecartmobile td,
+tfoot,
+th,
+thead,
+tr {
+    border-style: none !important;
+}
+
+#ordermobile td,
+tfoot,
+th,
+thead,
+tr {
+    border-style: none !important;
+}
+
+.nameprocart {
+    font-size: 15px;
+    color: #000;
+    font-weight: 500;
+}
+
+.nameprocart:hover {
+    color: #ffc107;
+}
+
+.boldcart {
+    font-family: 'SVN-Gilroy Bold';
+    color: #000000;
+    font-weight: bold;
+}
+
+.clusinp {
+    width: 120px;
+}
+
+.facartde {
+    color: #30656b;
+    font-weight: 200;
+}
+
+.tablecartmobile {
+    display: none;
+}
+
+.singlecartmobile {
+    margin-top: 20px;
+}
+
+.imgcartmobile {
+    width: 100px;
+}
+
+.nameprocmobile {
+    font-size: 0.8rem;
+    color: #000;
+    font-weight: 500;
+}
+
+.nameprocmobile:hover {
+    color: #ffc107;
+}
+
+.imgprocmobile {
+    width: 100px;
+    border-radius: 5px;
+}
+
+.tdinforcart {
+    position: relative;
+    min-width: 70px;
+}
+
+.clusinpmobile {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 7px;
+}
+
+.pricecmobile {
+    margin-right: 5px;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+}
+
+.cartdels {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.sizecmobile {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.cartgoiy {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.cartgoiy {
+    padding: 20px;
+}
+
+.tieudegy {
+    color: rgb(17, 0, 111) !important;
+    font-family: Insider-Montserrat, sans-serif !important;
+    font-size: 1.1rem;
+}
+
 
 .filterdiv {
     margin-top: 20px;
