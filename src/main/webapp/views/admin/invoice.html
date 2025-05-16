@@ -271,18 +271,55 @@
                     </tr>
                     </thead>
                     <tbody id="listDetailinvoice">
-                    <tr>
-                        <td><img src="image/sp1.webp" class="imgdetailacc"></td>
-                        <td>
-                            <a href="">Áo Thun Thể Thao Nam Run</a><br>
-                            <span>Đen / L</span><br>
-                            <span>Mã sản phẩm: STM6099-DEN-L</span><br>
-                            <span class="slmobile">SL: 1</span>
-                        </td>
-                        <td>269.000đ</td>
-                        <td class="sldetailacc">1</td>
-                        <td class="pricedetailacc yls">269.000đ</td>
-                    </tr>
+                    <div class="inner-wrapper">
+        <th:block th:replace="fragment/sidebarAdmin :: sidenavAdmin"></th:block>
+        <section role="main" class="content-body" id="main-content">
+            <th:block th:replace="fragment/sidebarAdmin :: pageHeader"></th:block>
+            <div class="row">
+                <div class="col-sm-12 header-sp">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="addcategory" class="btn btn-success"><i class="fa fa-plus"></i> Thêm danh mục</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="wrapper">
+                        <div class="inner-wrapper">
+        <th:block th:replace="fragment/sidebarAdmin :: sidenavAdmin"></th:block>
+        <section role="main" class="content-body" id="main-content">
+            <th:block th:replace="fragment/sidebarAdmin :: pageHeader"></th:block>
+            <div class="row">
+                <div class="inner-wrapper">
+        <th:block th:replace="fragment/sidebarAdmin :: sidenavAdmin"></th:block>
+        <section role="main" class="content-body" id="main-content">
+            <th:block th:replace="fragment/sidebarAdmin :: pageHeader"></th:block>
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="inner-wrapper">
+        <th:block th:replace="fragment/sidebarAdmin :: sidenavAdmin"></th:block>
+        <section role="main" class="content-body" id="main-content">
+            <th:block th:replace="fragment/sidebarAdmin :: pageHeader"></th:block>
+            <div class="row">
+                <div class="col-sm-5">
+                    <label class="lb-form">Tên danh mục</label>
+                    <input id="catename" type="text" class="form-control">
+                    <label class="checkbox-custom">Danh mục chính
+                        <input id="primaryCate" type="checkbox">
+                        <span class="checkmark-checkbox"></span>
+                    </label><br>
+                    <label class="lb-form">Ảnh danh mục</label>
+                    <input id="fileimage" type="file" class="form-control">
+                    <img id="imgpreview" style="width: 120px; margin-top: 15px;margin-bottom: 15px;display: block;">
+                    <label class="lb-form">Danh mục cha</label>
+                    <select id="listdpar" class="form-control" style="z-index: 10000;">
+                        <option value=""></option>
+                    </select>
+                    <br><br>
+                    <button onclick="saveCategory()" class="btn btn-success form-control action-btn">Thêm/ Cập nhật danh mục</button>
+                </div>
+            </div>
+        </section>
                     </tbody>
                 </table><br><br><br><br>
             </div>

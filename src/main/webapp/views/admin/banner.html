@@ -730,20 +730,75 @@
                     <p style="text-indent: 30px;" dir="ltr">Quý khách nhận hàng kiểm tra sản phẩm và nghĩ rằng sản phẩm giao cho bạn không đúng với đơn đặt hàng? Hãy liên hệ với chúng tôi càng sớm càng tốt, nhân viên CSKH sẽ kiểm tra nếu hàng của bạn bị gửi nhầm. Chúng tôi sẽ thay thế đúng sản phẩm mà bạn đã đặt hàng.</p><br>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 singleblog">
-                <div class="row">
-                    <div class="col-5">
-                        <a href="blogdetail"><img src="image/blog.webp" class="imgblog"></a>
-                    </div>
-                    <div class="col-7 cntblog">
-                        <a href="blogdetail" class="titleblog">15 Cách phối đồ với Jordan 1 cổ thấp CỰC CHẤT chuẩn Style</a>
-                        <a href="blogdetail"><span class="desblog">Sneaker phối với quần áo thường ngày đã trở thành một trong những outffit được rất nhiều bạn trẻ sử dụng. Nhưng liệu bạn đã biết cách phối đồ với Jordan 1 cổ thấp sao cho hợp thời trang hay chưa? Cùng YODy khám phá ngay sau đây nhé. </span></a>
-                        <div class="userblog">
-                            <img src="image/logo.png" class="avtyo">
-                            <span class="userdbg">Yody</span>
-                            <span class="timeblog"><i class="fa fa-clock"></i> 15/08/2023</span>
+                <div class="inner-wrapper">
+        <th:block th:replace="fragment/sidebarAdmin :: sidenavAdmin"></th:block>
+        <section role="main" class="content-body" id="main-content">
+            <th:block th:replace="fragment/sidebarAdmin :: pageHeader"></th:block>
+            <div class="row">
+                <div class="col-sm-12 header-sp">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 col-4">
+                            <label class="lb-form">Từ ngày</label>
+                            <input id="start" type="date" class="form-control">
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-4">
+                            <label class="lb-form">Đến ngày</label>
+                            <input id="end" type="date" class="form-control">
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-4">
+                            <label class="lb-form" style="display: block;">&ThickSpace;</label>
+                            <button onclick="filter()" class="btn btn-success"><i class="fa fa-filter"></i> Lọc</button>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="lb-form" style="display: block;">&ThickSpace;</label>
+                            <a href="addvoucher" class="btn btn-success"><i class="fa fa-plus"></i> Thêm voucher</a>
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-12">
+                    <div class="wrapper">
+                        <table class="table table-striped tablefix">
+                            <thead class="thead-tablefix">
+                            <tr>
+                                <th>id</th>
+                                <th>Mã</th>
+                                <th>Tên voucher</th>
+                                <th>Đơn hàng tối thiểu</th>
+                                <th>Giảm giá</th>
+                                <th>Ngày bắt đầu</th>
+                                <th>Ngày kết thúc</th>
+                                <th>Trạng thái</th>
+                                <th class="sticky-col">Hành động</th>
+                            </tr>
+                            </thead>
+                            <tbody id="listvoucher">
+                            <tr>
+                                <td>#2342</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="sticky-col">
+                                    <i class="fa fa-lock iconaction"></i>
+                                    <i class="fa fa-edit iconaction"></i><br>
+                                    <i class="fa fa-edit iconaction"></i><br>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination" id="pageable">
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
             </div>
                     <button onclick="saveCategory()" class="btn btn-success form-control action-btn">Thêm/ Cập nhật danh mục</button>
                 </div>
