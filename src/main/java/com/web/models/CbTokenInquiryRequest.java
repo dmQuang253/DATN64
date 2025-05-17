@@ -21,45 +21,10 @@ public class CbTokenInquiryRequest extends Request {
         return partnerClientId;
     }
 
-    public void setRequestId(String requestId) {
-        this.requestId = requestId;
+    public void setPartnerClientId(String partnerClientId) {
+        this.partnerClientId = partnerClientId;
     }
 
-    public String getPartnerClientId() {
-        return partnerClientId;
-    }
-
-    public Long getAmount() {
-        return amount;
-    }
-
-    public void setAmount(Long amount) {
-        this.amount = amount;
-    }
-
-    public String getPayUrl() {
-        return payUrl;
-    }
-
-    public void setPayUrl(String payUrl) {
-        this.payUrl = payUrl;
-    }
-
-    public String getShortLink() {
-        return shortLink;
-    }
-
-    public void setShortLink(String shortLink) {
-        this.shortLink = shortLink;
-    }
-
-    public String getDeeplink() {
-        return deeplink;
-    }
-
-    public String getAesToken() {
-        return aesToken;
-    }
     public String getSignature() {
         return signature;
     }
