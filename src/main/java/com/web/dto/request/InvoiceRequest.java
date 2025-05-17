@@ -31,6 +31,13 @@ public class InvoiceRequest {
 
     private String urlVnpay;
 
+    private String fullName;
+
+    private String phone;
+
+    private Long voucherId;
+
+
     private String statusGpay;
 
     private String merchantOrderId;

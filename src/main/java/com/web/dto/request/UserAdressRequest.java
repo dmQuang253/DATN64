@@ -23,6 +23,10 @@ public class UserAdressRequest {
 
     private Boolean primaryAddres;
 
+ private String token;
+
+    private UserDto user;
+
     @NotNull(message = "Xã/ thị trấn không được để trống")
     private Wards wards;
 }
