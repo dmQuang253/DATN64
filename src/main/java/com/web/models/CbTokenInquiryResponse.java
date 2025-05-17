@@ -24,24 +24,4 @@ public class CbTokenInquiryResponse extends Response {
     public void setCallbackToken(String callbackToken) {
         this.callbackToken = callbackToken;
     }
-
-public String getRequestId() {
-        return requestId;
-    }
-
-    public void setRequestId(String requestId) {
-        this.requestId = requestId;
-    }
-
-    public String getPartnerClientId() {
-        return partnerClientId;
-    }
-
-    public void setPartnerClientId(String partnerClientId) {
-        this.partnerClientId = partnerClientId;
-    }
-
-    public String getAesToken() {
-        return aesToken;
-    }
 }

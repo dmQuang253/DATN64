@@ -24,26 +24,12 @@ public class BindingTokenRequest extends Request {
         return partnerClientId;
     }
 
-     public CbTokenInquiryRequest(String partnerCode, String orderId, String requestId, Language lang, String partnerClientId, String signature) {
-        super(partnerCode, orderId, requestId, lang);
-        this.partnerClientId = partnerClientId;
-        this.signature = signature;
-    }
-
-    public String getPartnerClientId() {
-        return partnerClientId;
-    }
-
     public void setPartnerClientId(String partnerClientId) {
         this.partnerClientId = partnerClientId;
     }
 
-    public String getSignature() {
-        return signature;
-    }
-
-    public void setSignature(String signature) {
-        this.signature = signature;
+    public String getCallbackToken() {
+        return callbackToken;
     }
 
     public void setCallbackToken(String callbackToken) {
