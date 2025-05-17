@@ -44,12 +44,23 @@ public class PaymentRequest extends Request {
         this.orderInfo = orderInfo;
     }
 
-    public long getAmount() {
-        return amount;
+    public DeleteTokenRequest(String partnerCode, String orderId, String requestId, Language lang, String partnerClientId, String token, String signature) {
+        super(partnerCode, orderId, requestId, lang);
+        this.partnerClientId = partnerClientId;
+        this.token = token;
+        this.signature = signature;
     }
 
-    public void setAmount(long amount) {
-        this.amount = amount;
+    public String getPartnerClientId() {
+        return partnerClientId;
+    }
+
+    public void setPartnerClientId(String partnerClientId) {
+        this.partnerClientId = partnerClientId;
+    }
+
+    public String getToken() {
+        return token;
     }
 
     public String getPartnerName() {
