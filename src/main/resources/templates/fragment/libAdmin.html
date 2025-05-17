@@ -24,6 +24,61 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+	
+	<ul class="nav nav-main">
+
+          <li class="nav-parent">
+            <a class="nav-link" href="/admin/chat">
+              <i class="fas fa-comments"></i>
+
+              <span>Tin nhắn</span>
+            </a>
+          </li>
+          <li class="nav-parent">
+            <a class="nav-link" href="#">
+              <i class="fas fa-th-list"
+                 aria-hidden="true"></i>
+              <span>Quản lý danh mục</span>
+            </a>
+            <ul class="nav nav-children">
+              <li>
+                <a class="nav-link" href="/admin/danhmuc">
+                  Danh sách danh mục
+                </a>
+              </li>
+              <li>
+                <a class="nav-link" href="/admin/addcategory">
+                  Thêm danh mục
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-parent">
+            <a class="nav-link" href="#">
+              <i class="fas fa-sign"
+              aria-hidden="true"></i>
+              <span>Quản lý banner</span>
+            </a>
+            <ul class="nav nav-children">
+              <li>
+                <a class="nav-link" href="/admin/banner">
+                  Danh sách banner
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-parent">
+            <a class="nav-link" href="#">
+              <i class="fas fa-copyright" aria-hidden="true"></i>
+              <span>Quản lý nhãn hiệu</span>
+            </a>
+            <ul class="nav nav-children">
+              <li>
+                <a class="nav-link" href="/admin/brands">
+                  Danh sách nhãn hiệu
+                </a>
+              </li>
+            </ul>
 
     <script>
         $(document).ready(function() {
