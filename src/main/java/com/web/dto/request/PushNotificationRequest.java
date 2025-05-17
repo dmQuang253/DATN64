@@ -23,9 +23,22 @@ public class PushNotificationRequest {
     public String getTitle() {
         return title;
     }
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    @NotBlank(message = "Mã sản phẩm không được bỏ trống")
+    private String code;
+
+    private String alias;
+
+    @NotBlank(message = "Tên sản phẩm không được bỏ trống")
+    private String name;
+
+    private String imageBanner;
+
+    @NotNull(message = "Giá tiền không được bỏ trống")
+    private Double price;
+
+    private String description;
+
+    private Trademark trademark;
     public String getMessage() {
         return message;
     }

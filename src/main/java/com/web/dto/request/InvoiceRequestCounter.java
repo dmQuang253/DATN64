@@ -17,4 +17,14 @@ public class InvoiceRequestCounter {
     private String phone;
 
     private Long voucherId;
+
+    private String requestIdMomo;
+
+    private String orderIdMomo;
+
+    private Long userAddressId;
+
+    private String voucherCode;
+
+    private String note;
 }

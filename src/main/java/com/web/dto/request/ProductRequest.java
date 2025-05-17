@@ -38,6 +38,9 @@ public class ProductRequest {
 
     private Material material;
 
+ List<Long> listIdCategory = new ArrayList<>();
+    List<Long> listIdTrademark = new ArrayList<>();
+
     private Sole sole;
 
     private List<Long> listCategoryIds = new ArrayList<>();
