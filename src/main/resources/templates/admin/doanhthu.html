@@ -74,11 +74,26 @@
                     <img id="imgpreview" style="width: 120px; margin-top: 15px;margin-bottom: 15px;display: block;">
                     <label class="lb-form">Danh mục cha</label>
                     <div class="row">
-                <div class="col-sm-5">
-                    <label class="lb-form">Tên danh mục</label>
-                    <input id="catename" type="text" class="form-control">
-                    <div class="row">
-                <div class="col-sm-5">
+                <div class="col-sm-12">
+                    <div class="wrapper">
+                        <div class="headertable">
+                            <div class="row">
+                <div class="col-sm-12 header-sp row ">
+                    <div class="col-md-3">
+                        <p class="loctheongay">Chọn năm cần xem</p>
+                        <select id="nams" class="form-control">
+                            <option id="2023">2023</option>
+                            <option id="2024">2024</option>
+                            <option id="2025">2025</option>
+                            <option id="2026">2026</option>
+                            <option id="2027">2027</option>
+                            <option id="2028">2028</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2"><br>
+                        <button onclick="loadByNam()" class="btn btn-primary form-control" style="margin-top: 10px;"><i class="fa fa-filter"></i> Lọc</button>
+                    </div>
+                </div>
                     <label class="lb-form">Tên danh mục</label>
                     <input id="catename" type="text" class="form-control">
                     <label class="checkbox-custom">Danh mục chính
