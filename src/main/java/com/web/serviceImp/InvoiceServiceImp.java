@@ -192,7 +192,6 @@ public class InvoiceServiceImp implements InvoiceService {
             invoiceDetail.setQuantity(p.getQuantity());
             invoiceDetail.setProductSize(productSize);
             invoiceDetailRepository.save(invoiceDetail);
-            productSize.setQuantity(productSize.getQuantity() - p.getQuantity());
             productSizeRepository.save(productSize);
             try {
                 productSize.getProductColor().getProduct().setQuantitySold(productSize.getProductColor().getProduct().getQuantitySold() + p.getQuantity());
@@ -265,6 +264,7 @@ public class InvoiceServiceImp implements InvoiceService {
         if(invoice.get().getStatus().getId() == StatusUtils.DA_HUY){
             throw new MessageException("Đơn hàng đã bị hủy, không thể cập nhật trạng thái");
         }
+
         InvoiceStatus invoiceStatus = new InvoiceStatus();
         invoiceStatus.setInvoice(invoice.get());
         invoiceStatus.setCreatedDate(new Date(System.currentTimeMillis()));
@@ -273,6 +273,13 @@ public class InvoiceServiceImp implements InvoiceService {
         invoiceStatusRepository.save(invoiceStatus);
         invoice.get().setStatus(status.get());
         invoiceRepository.save(invoice.get());
+        if(invoice.get().getStatus().getId() == StatusUtils.DA_HUY){
+            List<InvoiceDetail> list  = invoiceDetailRepository.findByInvoiceId(invoiceId);
+            for(InvoiceDetail i : list){
+                i.getProductSize().setQuantity(i.getQuantity() + i.getProductSize().getQuantity());
+                productSizeRepository.save(i.getProductSize());
+            }
+        }
         return invoiceMapper.invoiceToInvoiceResponse(invoice.get());
     }
 

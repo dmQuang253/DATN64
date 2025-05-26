@@ -19,13 +19,4 @@ public class UserRequest {
     private String phone;
 
     private String tokenFcm;
-
-private String fullname;
-
-    private String phone;
-
-    private String streetName;
-
-    private Boolean primaryAddres;
-
 }
