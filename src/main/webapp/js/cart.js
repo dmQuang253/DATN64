@@ -29,7 +29,7 @@ async function addCart(product, check) {
         "size": size,
         "quantiy": document.getElementById("inputslcart").value
     }
-    if(obj.quantiy > dataQuantity){
+    if(Number(obj.quantiy) > Number(dataQuantity)){
         toastr.error("Số lượng sản phẩm này chỉ còn "+dataQuantity+" sản phẩm");
         return;
     }
